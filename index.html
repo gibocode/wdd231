@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WDD 231 Web Frontend Development I | Home Page</title>
+        <meta name="description" content="Welcome to WDD 231: Web Frontend Development I. Explore course content, weekly assignments, and resources to build modern, responsive websites.">
+        <meta name="author" content="Gilbor Camporazo Jr.">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/small.css">
+        <link rel="stylesheet" href="styles/larger.css">
+        <script src="scripts/main.js" type="module"></script>
+    </head>
+    <body>
+        <header>
+            <img src="images/gilbor.webp" width="100" height="100" alt="Gilbor">
+            <span>Gilbor D. Camporazo Jr.</span>
+            <a id="menu-button"></a>
+        </header>
+        <nav id="nav" class="hide">
+            <ul id="nav-container"></ul>
+        </nav>
+        <main>
+            <h1>Home</h1>
+            <section id="course-work">
+                <h2>Course Work</h2>
+                <div>
+                    <ul>
+                        <li>Sample 1</li>
+                        <li>Sample 2</li>
+                        <li>Sample 3</li>
+                        <li>Sample 4</li>
+                        <li>Sample 5</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="country">
+                <h2>Bacolod, Philippines</h2>
+                <div>
+                    <figure>
+                        <img src="images/masskara.webp" alt="Masskara Festival" width="400" height="266">
+                    </figure>
+                    <figcaption>
+                        <p>Masskara Festival</p>
+                    </figcaption>
+                </div>
+            </section>
+            <section id="certificates">
+                <h2>Web and Computer Programming Certificate</h2>
+                <div>
+                    <div class="course-button-container">
+                        <button type="button" id="all-courses" class="course-button">ALL</button>
+                        <button type="button" id="cse-courses" class="course-button">CSE</button>
+                        <button type="button" id="wdd-courses" class="course-button">WDD</button>
+                    </div>
+                    <div class="course-container"></div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p><span id="currentyear"></span>
+                <span> &bull; Gilbor D. Camporazo Jr. &bull; </span>
+                <span>Philippines <img src="images/philippines.webp" alt="Philippines" width="30"></span>
+            </p>
+            <p id="lastModified"></p>
+        </footer>
+    </body>
+</html>
