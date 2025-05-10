@@ -46,6 +46,7 @@ header > span {
     margin-left: auto;
     transition: all 0.3s ease;
     border-radius: 5px;
+    text-decoration: none;
 }
 
 #menu-button:hover {
