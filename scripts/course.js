@@ -1,7 +1,8 @@
 export default class Course {
-    constructor(group, number, completed = false) {
+    constructor(group, number, credits, completed = false) {
         this.group = group;
         this.number = number;
+        this.credits = credits;
         this.completed = completed;
     }
     render() {

@@ -39,23 +39,26 @@ lastModified.innerHTML = `Last modified: ${document.lastModified}`;
 
 // Courses
 const courses = [
-	new Course("CSE", 110, true),
-	new Course("WDD", 130, true),
-	new Course("CSE", 111, true),
-	new Course("CSE", 210, true),
-	new Course("WDD", 131, true),
-	new Course("WDD", 231),
+	new Course("CSE", 110, 2, true),
+	new Course("WDD", 130, 2, true),
+	new Course("CSE", 111, 2, true),
+	new Course("CSE", 210, 2, true),
+	new Course("WDD", 131, 2, true),
+	new Course("WDD", 231, 2),
 ];
 
 const courseContainer = document.querySelector(".course-container");
+const totalCreditsDiv = document.querySelector("#total-credits");
 
-let filteredCourses = [];
+function init() {
+	let filteredCourses = [];
+	filteredCourses = filterCourses("all", courses);
+	filteredCourses.forEach(course => {
+		courseContainer.innerHTML += course.render();
+	});
+}
 
-filteredCourses = filterCourses("all", courses);
-
-filteredCourses.forEach(course => {
-	courseContainer.innerHTML += course.render();
-});
+init();
 
 function filterCourses(type, courses) {
 	let filteredCourses = courses.filter(course => {
@@ -67,7 +70,13 @@ function filterCourses(type, courses) {
 		}
 		return true;
 	});
+	let totalCredits = filteredCourses.map(course => course.credits).reduce(getTotalCredits, 0);
+	totalCreditsDiv.innerHTML = `Total Credits: ${totalCredits}`;
 	return filteredCourses;
+}
+
+function getTotalCredits(total, credit) {
+	return total + credit;
 }
 
 // Filter Courses
@@ -85,7 +94,7 @@ allCoursesButton.addEventListener("click", () => {
 
 cseCoursesButton.addEventListener("click", () => {
 	courseContainer.innerHTML = "";
-	filteredCourses = filterCourses("cse", courses);
+	let filteredCourses = filterCourses("cse", courses);
 	filteredCourses.forEach(course => {
 		courseContainer.innerHTML += course.render();
 	});
@@ -93,7 +102,7 @@ cseCoursesButton.addEventListener("click", () => {
 
 wddCoursesButton.addEventListener("click", () => {
 	courseContainer.innerHTML = "";
-	filteredCourses = filterCourses("wdd", courses);
+	let filteredCourses = filterCourses("wdd", courses);
 	filteredCourses.forEach(course => {
 		courseContainer.innerHTML += course.render();
 	});
