@@ -12,6 +12,8 @@ const navigationItems = [
 
 const navContainer = document.querySelector("#nav-container");
 
+navContainer.innerHTML = "";
+
 navigationItems.forEach(item => {
 	navContainer.innerHTML += item.render();
 });
