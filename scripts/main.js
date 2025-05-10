@@ -1,22 +1,22 @@
-import Navigation from "./navigation.js";
+// import Navigation from "./navigation.js";
 import Course from "./course.js";
 
 // Navigation Menu Items
-const navigationItems = [
-    new Navigation("Home", "index.html", true),
-    new Navigation("Chamber", "about.html"),
-    new Navigation("Final", "contact.html"),
-    new Navigation("Github Profile", "portfolio.html"),
-    new Navigation("LinkedIn", "https://ph.linkedin.com/in/giboprogrammer"),
-];
+// const navigationItems = [
+//     new Navigation("Home", "index.html", true),
+//     new Navigation("Chamber", "#"),
+//     new Navigation("Final", "#"),
+//     new Navigation("Github Profile", "#"),
+//     new Navigation("LinkedIn", "https://ph.linkedin.com/in/giboprogrammer"),
+// ];
 
-const navContainer = document.querySelector("#nav-container");
+// const navContainer = document.querySelector("#nav-container");
 
-navContainer.innerHTML = "";
+// navContainer.innerHTML = "";
 
-navigationItems.forEach(item => {
-	navContainer.innerHTML += item.render();
-});
+// navigationItems.forEach(item => {
+// 	navContainer.innerHTML += item.render();
+// });
 
 // Navigation Menu
 const menuButton = document.querySelector("#menu-button");
