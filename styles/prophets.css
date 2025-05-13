@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+#cards {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+}
+
+section {
+    padding: 20px;
+    background-color: #265081;
+}
+
+section img {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+h1 {
+    color: #103157;
+    margin: 10px 0;
+}
+
+h2 {
+    color: #fff;
+    margin: 10px 0;
+}
+
+p {
+    color: #b4c6da;
+}
