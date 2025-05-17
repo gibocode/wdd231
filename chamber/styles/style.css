@@ -33,6 +33,12 @@ section > div:first-of-type {
     justify-content: space-between;
 }
 
+h1 {
+    font-size: 1.7rem;
+    color: var(--accent1-color);
+    margin: 0;
+}
+
 h2 {
     color: var(--primary-color);
 }
@@ -59,11 +65,6 @@ footer > div {
 #header-title {
     margin-left: 10px;
     align-content: center;
-}
-
-#header-title div:first-of-type {
-    font-size: 1.7rem;
-    color: var(--accent1-color)
 }
 
 #header-title div {
