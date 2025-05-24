@@ -1,6 +1,17 @@
+h1 {
+    position: absolute;
+    color: #fff;
+    top: 1em;
+    left: 1em;
+}
+
 h2 {
     font-size: 1.7rem;
     text-align: center;
+}
+
+.main {
+    position: relative;
 }
 
 .hero img, .join-us img {
