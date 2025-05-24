@@ -24,8 +24,6 @@ async function getWeatherData() {
     const temp = data.main.temp;
     const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
 
-    console.log(icon);
-
     const weatherIcon = document.querySelector('#weather-icon');
     const weatherTemp = document.querySelector('#weather-temp');
     const weattherDescription = document.querySelector('#weather-description');

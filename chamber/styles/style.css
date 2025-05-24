@@ -96,6 +96,7 @@ footer > div {
     position: absolute;
     border-bottom: 1px solid var(--accent2-color);
     box-shadow: 0 9px 10px rgb(0, 0, 0, 0.3);
+    z-index: 1;
 }
 
 #nav-container > li {
