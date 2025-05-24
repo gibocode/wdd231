@@ -5,7 +5,7 @@
         "phone": "(555) 234-6789",
         "website": "http://www.greenfieldlandscaping.com",
         "image": "greenfield_logo",
-        "membership_level": 3,
+        "membership_level": "Gold",
         "email": "contact@greenfieldlandscaping.com",
         "description": "Full-service landscape design and maintenance for residential and commercial properties."
     },
@@ -15,7 +15,7 @@
         "phone": "(555) 123-4567",
         "website": "http://www.sunrisecoffee.com",
         "image": "sunrise_coffee_logo",
-        "membership_level": 2,
+        "membership_level": "Silver",
         "email": "hello@sunrisecoffee.com",
         "description": "Locally roasted, ethically sourced coffee with a cozy café atmosphere."
     },
@@ -25,7 +25,7 @@
         "phone": "(555) 765-4321",
         "website": "http://www.precisiontech.com",
         "image": "precision_tech_logo",
-        "membership_level": 3,
+        "membership_level": "Gold",
         "email": "info@precisiontech.com",
         "description": "IT consulting and software development services for small and mid-sized businesses."
     },
@@ -35,7 +35,7 @@
         "phone": "(555) 987-6543",
         "website": "http://www.bellasboutique.com",
         "image": "bellas_boutique_logo",
-        "membership_level": 1,
+        "membership_level": "Bronze",
         "email": "shop@bellasboutique.com",
         "description": "Trendy women’s fashion and accessories, with personalized styling services."
     },
@@ -45,7 +45,7 @@
         "phone": "(555) 319-2020",
         "website": "http://www.heritagelawgroup.com",
         "image": "heritage_law_logo",
-        "membership_level": 2,
+        "membership_level": "Silver",
         "email": "legal@heritagelawgroup.com",
         "description": "Family and business law firm with over 25 years of experience."
     },
@@ -55,7 +55,7 @@
         "phone": "(555) 678-1122",
         "website": "http://www.fitcorewellness.com",
         "image": "fitcore_gym_logo",
-        "membership_level": 1,
+        "membership_level": "Bronze",
         "email": "support@fitcorewellness.com",
         "description": "Community gym with personal training, group classes, and nutrition coaching."
     },
@@ -65,7 +65,7 @@
         "phone": "(555) 441-7788",
         "website": "http://www.brightfuturesedu.com",
         "image": "bright_futures_logo",
-        "membership_level": 3,
+        "membership_level": "Gold",
         "email": "admin@brightfuturesedu.com",
         "description": "Early childhood education center with programs for infants to pre-K."
     }

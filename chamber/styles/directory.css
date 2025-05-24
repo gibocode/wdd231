@@ -1,0 +1,121 @@
+main {
+    padding: 20px;
+}
+
+section > div:first-of-type {
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+}
+
+#members-placeholder {
+    height: 100vh;
+    background-color: var(--accent2-color);
+}
+
+#member-list {
+    display: grid;
+    padding: 20px 0;
+    list-style: none;
+}
+
+#member-list.grid-view {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+#member-list.list-view img, .list-view .member-info > div > div:first-of-type, .list-view .member-info > div > div:last-of-type {
+    display: none;
+}
+
+.grid-view .member-item {
+    box-shadow: 0 0 10px #0000002b;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-view .member-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid var(--accent2-color);
+}
+
+.list-view .member-item:nth-of-type(even) {
+    background-color: var(--accent2-color);
+}
+
+.member-name {
+    color: var(--primary-color)
+}
+
+.grid-view .member-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.list-view .member-name {
+    align-content: center;
+    padding-left: 20px;
+}
+
+.grid-view .member-info {
+    display: grid;
+    grid-template-rows: 1fr;
+    font-size: 0.9rem;
+    height: calc(100% - 40px);
+}
+
+.grid-view .member-info div:last-of-type {
+    align-content: end;
+}
+
+.list-view .member-info > div:not(.image-container) {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.list-view .member-info > div > div {
+    padding: 20px;
+    justify-content: center;
+    align-content: center;
+}
+
+.list-view .member-info > div > div:has(.member-url), .list-view .member-info > div > div:has(.member-address) {
+    display: none;
+}
+
+.list-view .member-phone {
+    justify-content: center;
+}
+
+.list-view .image-container {
+    display: none;
+}
+
+.grid-view .member-info .image-container {
+    width: 100%;
+    height: auto;
+    min-height: 240px;
+    margin-bottom: 10px;
+    align-content: center;
+    background-color: white;
+}
+
+.grid-view .member-info > .image-container > picture > img {
+    width: 100%;
+    height: auto;
+    align-self: center;
+}
+
+.member-info > div > div {
+    display: flex;
+    padding: 3px 0;
+    align-items: center;
+    word-break: break-all;
+}
+
+.grid-view .member-info > div > div > img {
+    margin-right: 10px;
+}

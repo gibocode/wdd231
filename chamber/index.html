@@ -3,22 +3,22 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Directory | Timbuktu Chamber of Commerce</title>
-        <meta name="description" content="Explore a comprehensive list of local businesses and organizations that are proud members of the Chamber of Commerce.">
+        <title>Home | Timbuktu Chamber of Commerce</title>
+        <meta name="description" content="Welcome to the Timbuktu Chamber of Commerce — your gateway to local business support, community development, and economic growth in the heart of Timbuktu.">
         <meta name="author" content="Gilbor Camporazo Jr.">
-        <meta property="og:title" content="Directory | Timbuktu Chamber of Commerce">
-        <meta property="og:description" content="Explore a comprehensive list of local businesses and organizations that are proud members of the Chamber of Commerce.">
+        <meta property="og:title" content="Home | Timbuktu Chamber of Commerce">
+        <meta property="og:description" content="Welcome to the Timbuktu Chamber of Commerce — your gateway to local business support, community development, and economic growth in the heart of Timbuktu.">
         <meta property="og:image" content="https://gibocode.github.io/wdd231/chamber/images/logo_xlarge.webp">
-        <meta property="og:url" content="https://gibocode.github.io/wdd231/chamber/directory.html">
+        <meta property="og:url" content="https://gibocode.github.io/wdd231/chamber/home.html">
         <link rel="icon" href="images/favicon.ico">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/style.css">
-        <link rel="stylesheet" href="styles/directory.css">
+        <link rel="stylesheet" href="styles/home.css">
         <script src="scripts/script.js" defer></script>
-        <script src="scripts/directory.js" defer></script>
+        <script src="scripts/home.js" defer></script>
     </head>
     <body>
         <div id="header-container">
@@ -36,10 +36,10 @@
             <nav id="nav">
                 <ul id="nav-container">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link active" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="directory.html">Directory</a>
+                        <a class="nav-link" href="directory.html">Directory</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Join</a>
@@ -52,26 +52,53 @@
         </div>
         <main>
             <section>
-                <h1>Directory</h1>
-                <div>
-                    <button class="button" type="button" id="grid-button" aria-label="Display grid" title="Grid">
-                        <svg width="25" height="25" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7 1H1V7H7V1ZM7 9H1V15H7V9ZM9 1H15V7H9V1ZM15 9H9V15H15V9Z"/>
-                        </svg>
-                    </button>
-                    <button class="button" type="button" id="list-button" aria-label="Display list" title="List">
-                        <svg width="25" height="25" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 1H1V3H3V1Z"/>
-                            <path d="M3 5H1V7H3V5Z"/>
-                            <path d="M1 9H3V11H1V9Z"/>
-                            <path d="M3 13H1V15H3V13Z"/>
-                            <path d="M15 1H5V3H15V1Z"/>
-                            <path d="M15 5H5V7H15V5Z"/>
-                            <path d="M5 9H15V11H5V9Z"/>
-                            <path d="M15 13H5V15H15V13Z"/>
-                        </svg>
-                    </button>
+                <!-- <h1></h1> -->
+                <div class="hero">
+                    <picture>
+                        <source srcset="images/hero_large.webp" media="(min-width: 768px)">
+                        <source srcset="images/hero_medium.webp" media="(min-width: 480px)">
+                        <img src="images/hero_small.webp" alt="Hero Image" width="412" height="493">
+                    </picture>
                 </div>
+            </section>
+            <section class="join-us">
+                <div class="join-us-text">
+                    <h2>Success Together</h2>
+                    <p>Empower your business — become a member of the Timbuktu Chamber of Commerce today.</p>
+                    <a href="#" class="btn btn-secondary">Join Us</a>
+                </div>
+                <div>
+                    <picture>
+                        <source srcset="images/join_us_large.webp" media="(min-width: 768px)">
+                        <source srcset="images/join_us_medium.webp" media="(min-width: 480px)">
+                        <img src="images/join_us_small.webp" alt="Join Us Image" width="412" height="379">
+                    </picture>
+                </div>
+            </section>
+            <section class="events">
+                <h2>Events</h2>
+                <div>
+                    <div>
+                        <img src="images/event1_small.webp" alt="Event 1" width="347" height="347">
+                    </div>
+                </div>
+            </section>
+            <section class="weather">
+                <h2>Weather Today</h2>
+                <div>
+                    <img src="" id="weather-icon" alt="Weather Icon" width="100" height="100" loading="lazy">
+                    <div>
+                        <div>
+                            <span id="weather-temp"></span>
+                            <span>&deg;C</span>
+                        </div>
+                        <div id="weather-description"></div>
+                    </div>
+                </div>
+                <div id="forecasted-weather"></div>
+            </section>
+            <section class="spotlights">
+                <h2>Spotlights</h2>
                 <div>
                     <ul id="member-list">
                         <li id="members-placeholder"></li>
@@ -86,7 +113,7 @@
                             <picture>
                                 <source srcset="images/placeholder.webp" class="member-image-large" media="(min-width: 768px)">
                                 <source srcset="images/placeholder.webp" class="member-image-medium" media="(min-width: 480px)">
-                                <img src="images/placeholder.webp" alt="" class="member-image" width="auto" height="auto">
+                                <img src="images/placeholder.webp" alt="" class="member-image" width="250" height="250">
                             </picture>
                         </div>
                         <div>
