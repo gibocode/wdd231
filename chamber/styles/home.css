@@ -28,10 +28,13 @@ h2 {
 .join-us-text {
     background-color: #fff;
     padding: 4em 2em;
+    text-align: center;
+    justify-items: center;
 }
 
 .join-us-text p {
-    padding: 20px;
+    padding: 20px 20px 40px;
+    font-size: 1.2rem;
 }
 
 .join-us .btn {
@@ -39,14 +42,28 @@ h2 {
     padding: 15px;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .events {
-    padding: 4em 2em;
+    padding: 2em;
 }
 
-.events > div {
-    margin-top: 10px;
+.events h2 {
+    background-color: var(--accent2-color);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#events-list {
+    /* display: grid; */
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    list-style: none;
+    /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
+    gap: 20px;
 }
 
 .events img {
@@ -56,29 +73,41 @@ h2 {
 
 .weather {
     background-color: var(--accent1-color);
-    padding: 4em 2em;
+    padding: 2em;
+}
+
+.weather h2 {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .weather img {
-    display: flex;
+    display: none;
     justify-self: right;
 }
 
-.weather > div {
+.weather > div > div:first-of-type {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    background-color: var(--secondary-color);
+    color: var(--accent2-color);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
 }
 
-.weather > div > div {
+.weather > div > div > div {
     display: flex;
     flex-direction: column;
     align-self: center;
 }
 
-.weather > div > div > div {
+.weather > div > div > div > div {
     display: flex;
     gap: 5px;
+    justify-content: center;
 }
 
 #weather-temp {
@@ -86,23 +115,29 @@ h2 {
     font-size: 2.5rem;
 }
 
-.weather > div > div > div > span {
-    font-size: 1.5rem;
+.weather > div > div > div > div > span {
+    font-size: 1rem;
 }
 
 #forecasted-weather {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    gap: 15px;
     justify-items: center;
+    color: #fff;
 }
 
 #forecasted-weather > div {
     align-items: center;
+    background-color: rgba(235, 235, 235, 0.31);
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
 }
 
 .forecasted-temp {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #162a79;
 }
 
@@ -117,11 +152,14 @@ h2 {
 }
 
 .spotlights {
-    padding: 4em 2em;
+    padding: 2em;
 }
 
-.spotlights > div {
-    margin-top: 10px;
+.spotlights h2 {
+    background-color: var(--accent2-color);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 #members-placeholder {
@@ -133,7 +171,7 @@ h2 {
     display: grid;
     padding: 20px 0;
     list-style: none;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
 }
 
@@ -187,4 +225,65 @@ h2 {
 
 .member-info > div > div > img {
     margin-right: 10px;
+}
+
+@media screen and (min-width: 412px) {
+
+    .weather img {
+        display: flex;
+    }
+
+    .forecasted-temp {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 640px) {
+
+    .join-us .btn {
+        width: auto;
+        max-width: 800px;
+        min-width: 250px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    .events > h2, .events > div, .weather > h2, .weather > div, .spotlights > h2, .spotlights > div{
+        max-width: 1200px;
+        justify-self: center;
+        width: 100%;
+    }
+
+    .weather > div {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    #forecasted-weather {
+        width: 100%;
+        padding-left: 15px;
+    }
+
+    #forecasted-weather > div {
+        height: calc(100% - 20px);
+        align-self: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .forecasted-temp {
+        font-size: 2.5rem;
+    }
+
+    .forecasted-day {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 1076px) {
+
+    #member-list {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
 }

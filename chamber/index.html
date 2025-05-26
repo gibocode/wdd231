@@ -55,6 +55,7 @@
                 <h1>Timbuktu Chamber of Commerce</h1>
                 <div class="hero">
                     <picture>
+                        <source srcset="images/hero_extra_large.webp" media="(min-width: 1000px)">
                         <source srcset="images/hero_large.webp" media="(min-width: 768px)">
                         <source srcset="images/hero_medium.webp" media="(min-width: 480px)">
                         <img src="images/hero_small.webp" alt="Hero Image" width="412" height="493">
@@ -78,24 +79,37 @@
             <section class="events">
                 <h2>Events</h2>
                 <div>
-                    <div>
-                        <img src="images/event1_small.webp" alt="Event 1" width="347" height="347">
-                    </div>
+                    <ul id="events-list">
+                        <li>
+                            <picture>
+                                <source srcset="images/event1_medium.webp" media="(min-width: 480px)">
+                                <img src="images/event1_small.webp" alt="Event 1" width="400" height="400">
+                            </picture>
+                        </li>
+                        <li>
+                            <picture>
+                                <source srcset="images/event2_medium.webp" media="(min-width: 480px)">
+                                <img src="images/event2_small.webp" alt="Event 1" width="400" height="400">
+                            </picture>
+                        </li>
+                    </ul>
                 </div>
             </section>
             <section class="weather">
                 <h2>Weather Today</h2>
                 <div>
-                    <img src="#" id="weather-icon" alt="Weather Icon" width="100" height="100" loading="lazy">
                     <div>
+                        <img src="#" id="weather-icon" alt="Weather Icon" width="100" height="100" loading="lazy">
                         <div>
-                            <span id="weather-temp"></span>
-                            <span>&deg;C</span>
+                            <div>
+                                <span id="weather-temp"></span>
+                                <span>&deg;C</span>
+                            </div>
+                            <div id="weather-description"></div>
                         </div>
-                        <div id="weather-description"></div>
                     </div>
+                    <div id="forecasted-weather"></div>
                 </div>
-                <div id="forecasted-weather"></div>
             </section>
             <section class="spotlights">
                 <h2>Spotlights</h2>
