@@ -90,6 +90,7 @@ allCoursesButton.addEventListener("click", () => {
 	filteredCourses.forEach(course => {
 		courseContainer.innerHTML += course.render();
 	});
+	initModal();
 });
 
 cseCoursesButton.addEventListener("click", () => {
@@ -98,6 +99,7 @@ cseCoursesButton.addEventListener("click", () => {
 	filteredCourses.forEach(course => {
 		courseContainer.innerHTML += course.render();
 	});
+	initModal();
 });
 
 wddCoursesButton.addEventListener("click", () => {
@@ -106,4 +108,36 @@ wddCoursesButton.addEventListener("click", () => {
 	filteredCourses.forEach(course => {
 		courseContainer.innerHTML += course.render();
 	});
+	initModal();
 });
+
+function initModal() {
+
+	const courseItems = document.querySelectorAll('.course');
+	const modal = document.querySelector("#course-details");
+	const closeModalButton = document.querySelector("#close-modal-button");
+
+	courseItems.forEach(course => {
+		course.addEventListener("click", async function () {
+			const parts = this.textContent.split(" ");
+			const subject = parts[0];
+			const number = parts[1];
+			const response = await fetch("data/courses.json");
+			const courses = await response.json();
+			const course = courses.filter(course => course.subject == subject && course.number == number)[0];
+
+			document.querySelector("#course-name").textContent = `${subject} ${number}`;
+			document.querySelector("#course-title").textContent = course.title;
+			document.querySelector("#course-credits").textContent = `${course.credits} Credits`;
+			document.querySelector("#course-certificate").textContent = `Certificate: ${course.certificate}`;
+			document.querySelector("#course-description").textContent = course.description;
+			document.querySelector("#course-technology").textContent = `Technology: ${course.technology.join(", ")}`;
+
+			modal.showModal();
+		});
+	});
+
+	closeModalButton.addEventListener("click", () => modal.close());
+}
+
+initModal();

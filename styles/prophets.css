@@ -40,3 +40,12 @@ h2 {
 p {
     color: #b4c6da;
 }
+
+#test {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#test div {
+    width: 50%;
+}

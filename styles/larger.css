@@ -64,4 +64,7 @@
 	footer img {
 		width: 30px;
 	}
+	#course-details {
+		margin: 0 auto;
+	}
 }

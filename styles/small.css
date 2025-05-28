@@ -168,11 +168,20 @@ h2 {
     color:  #18230F;
     padding: 10px;
     text-align: center;
+    cursor: pointer;
+}
+
+.course:hover {
+    background-color: #c2d1cb;
 }
 
 .course.completed {
     background-color: #1a6443;
     color: #fff;
+}
+
+.course.completed:hover {
+    background-color: #298c5f;
 }
 
 .course.completed::before {
@@ -205,4 +214,56 @@ footer img {
     width: 20px;
     height: auto;
     margin: 0 5px;
+}
+
+#course-details {
+    position: absolute;
+    top: 10vh;
+    margin: 0 20px;
+    max-width: 760px;
+    border-radius: 10px;
+    border-color: #1a6443;
+    overflow: hidden;
+}
+
+#course-details button {
+    color: #1a6443;
+    border: none;
+    background-color: #fff;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+#course-details button:hover {
+    color: #336e47;
+}
+
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#modal-header {
+    padding: 10px;
+    background-color: #1a6443;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#course-details-content {
+    padding: 30px;
+}
+
+#course-title {
+    font-weight: bold;
+}
+
+#course-details-content > div:not(:last-child) {
+    margin-bottom: 20px
 }
