@@ -3,22 +3,22 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Join | Timbuktu Chamber of Commerce</title>
+        <title>Thank You | Timbuktu Chamber of Commerce</title>
         <meta name="description" content="Join the Timbuktu Chamber of Commerce and connect with local businesses, gain exclusive resources, and grow your network. Become a member today and support community-driven success.">
         <meta name="author" content="Gilbor Camporazo Jr.">
-        <meta property="og:title" content="Join | Timbuktu Chamber of Commerce">
+        <meta property="og:title" content="Thank You | Timbuktu Chamber of Commerce">
         <meta property="og:description" content="Join the Timbuktu Chamber of Commerce and connect with local businesses, gain exclusive resources, and grow your network. Become a member today and support community-driven success.">
         <meta property="og:image" content="https://gibocode.github.io/wdd231/chamber/images/logo_xlarge.webp">
-        <meta property="og:url" content="https://gibocode.github.io/wdd231/chamber/join.html">
+        <meta property="og:url" content="https://gibocode.github.io/wdd231/chamber/thankyou.html">
         <link rel="icon" href="images/favicon.ico">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/style.css">
-        <link rel="stylesheet" href="styles/join.css">
+        <!-- <link rel="stylesheet" href="styles/join.css"> -->
         <script src="scripts/script.js" defer></script>
-        <script src="scripts/join.js" defer></script>
+        <!-- <script src="scripts/join.js" defer></script> -->
     </head>
     <body>
         <div id="header-container">
@@ -51,85 +51,7 @@
             </nav>
         </div>
         <main>
-            <h1>Membership Registration</h1>
-            <div class="content">
-                <form action="thankyou.html">
-                    <div class="form-group">
-                        <label>First Name:
-                            <input class="form-control" type="text" name="firstname" title="First Name" autocomplete="on" required>
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label>Last Name:
-                            <input class="form-control" type="text" name="lastname" title="Last Name" autocomplete="on" required>
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label>Organization Title:
-                            <input class="form-control" type="text" name="organization" title="Organization Title" autocomplete="organization-title" pattern="[a-zA-Z\- ]{7,}">
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label>Email Address:
-                            <input class="form-control" type="email" name="email" title="Email Address" autocomplete="email" placeholder="email@example.com" required>
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label>Mobile Phone Number:
-                            <input class="form-control" type="tel" name="phone" title="Mobile Phone Number" autocomplete="tel" required>
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label>Business/Organization's Name:
-                            <input class="form-control" type="text" name="business-name" title="Business/Organization's Name" autocomplete="organization" required>
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label>Membership Level:
-                            <select class="form-control" name="membership-level">
-                                <option disabled selected>Select Membership</option>
-                                <option value="np">NP Membership</option>
-                                <option value="bronze">Bronze Membership</option>
-                                <option value="silver">Silver Membership</option>
-                                <option value="gold">Gold Membership</option>
-                            </select>
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label>Business/Organization's Description:
-                            <textarea class="form-control" title="Business/Organization's Description" name="description" rows="6"></textarea>
-                        </label>
-                    </div>
-                    <input type="hidden" name="timestamp" id="timestamp">
-                    <button type="submit" class="btn btn-secondary self-right">Submit</button>
-                </form>
-                <div>
-                    <div>
-                        <div>Non-Profit Membership Level</div>
-                        <div>
-                            <button class="learn-more-button btn btn-secondary " data-id="np">Learn More</button>
-                        </div>
-                    </div>
-                    <div>
-                        <div>Bronze Membership Level</div>
-                        <div>
-                            <button class="learn-more-button btn btn-secondary " data-id="bronze">Learn More</button>
-                        </div>
-                    </div>
-                    <div>
-                        <div>Silver Membership Level</div>
-                        <div>
-                            <button class="learn-more-button btn btn-secondary " data-id="silver">Learn More</button>
-                        </div>
-                    </div>
-                    <div>
-                        <div>Gold Membership Level</div>
-                        <div>
-                            <button class="learn-more-button btn btn-secondary " data-id="gold">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </main>
         <footer>
             <div>
@@ -158,32 +80,16 @@
             </div>
         </footer>
     </body>
-    <dialog id="np-level-modal" class="modal modal-md">
-        <div class="modal-header bg-primary">Non-Profit Membership Level</div>
-        <div class="modal-body">TEST</div>
-        <div class="modal-footer">
-            <button class="btn btn-default close-modal-button" data-modal-id="np">Close</button>
-        </div>
+    <dialog id="np-level-modal" class="modal">
+        NP Level
     </dialog>
-    <dialog id="bronze-level-modal" class="modal modal-md">
-        <div class="modal-header bg-primary">Bronze Membership Level</div>
-        <div class="modal-body">TEST</div>
-        <div class="modal-footer">
-            <button class="btn btn-default close-modal-button" data-modal-id="bronze">Close</button>
-        </div>
+    <dialog id="bronze-level-modal" class="modal">
+        Bronze Level
     </dialog>
-    <dialog id="silver-level-modal" class="modal modal-md">
-        <div class="modal-header bg-primary">Silver Membership Level</div>
-        <div class="modal-body">TEST</div>
-        <div class="modal-footer">
-            <button class="btn btn-default close-modal-button" data-modal-id="silver">Close</button>
-        </div>
+    <dialog id="silver-level-modal" class="modal">
+        Silver Level
     </dialog>
-    <dialog id="gold-level-modal" class="modal modal-md">
-        <div class="modal-header bg-primary">Gold Membership Level</div>
-        <div class="modal-body">TEST</div>
-        <div class="modal-footer">
-            <button class="btn btn-default close-modal-button" data-modal-id="gold">Close</button>
-        </div>
+    <dialog id="gold-level-modal" class="modal">
+        Gold Level
     </dialog>
 </html>

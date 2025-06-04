@@ -153,6 +153,8 @@ footer > div {
     padding: 10px 20px;
     transition: all 0.1s linear;
     display: inline-block;
+    border: none;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -175,6 +177,11 @@ footer > div {
 
 .btn-secondary:hover {
     background-color: #334bac;
+}
+
+.btn-default {
+    background-color: var(--accent2-color);
+    border: 1px solid #d2d0d0;
 }
 
 @media screen and (min-width: 360px) {

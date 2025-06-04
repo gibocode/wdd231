@@ -1,0 +1,79 @@
+main {
+    padding: 20px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+form {
+    padding: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.form-group {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1rem;
+}
+
+.form-control {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.self-right {
+    display: flex;
+    justify-self: right;
+}
+
+.modal {
+    margin: 0 auto;
+    top: 10px;
+    background-color: #fff;
+    border: none;
+}
+
+.modal > div {
+    width: 100%;
+}
+
+.modal-md {
+    width: auto;
+    max-width: 800px;
+}
+
+.modal-header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.modal-footer {
+    background-color: var(--accent2-color);
+    text-align: center;
+    padding: 10px;
+}
+
+.modal::backdrop {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.bg-primary {
+    background-color: var(--primary-color);
+}
