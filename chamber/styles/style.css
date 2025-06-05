@@ -184,6 +184,11 @@ footer > div {
     border: 1px solid #d2d0d0;
 }
 
+.btn-lg {
+    font-size: 1.5rem;
+    padding: 15px 40px;
+}
+
 @media screen and (min-width: 360px) {
 
     #member-list {
