@@ -16,9 +16,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/style.css">
-        <!-- <link rel="stylesheet" href="styles/join.css"> -->
+        <link rel="stylesheet" href="styles/join.css">
         <script src="scripts/script.js" defer></script>
-        <!-- <script src="scripts/join.js" defer></script> -->
+        <script src="scripts/join.js" defer></script>
     </head>
     <body>
         <div id="header-container">
@@ -51,7 +51,35 @@
             </nav>
         </div>
         <main>
-
+            <div class="m-auto card card-md">
+                <div class="card-title">Thank You For Registering!</div>
+                <div class="card-body">
+                    <div>
+                        <div class="font-bold">First Name:</div>
+                        <div id="firstname"></div>
+                    </div>
+                    <div>
+                        <div class="font-bold">Last Name:</div>
+                        <div id="lastname"></div>
+                    </div>
+                    <div>
+                        <div class="font-bold">Email:</div>
+                        <div id="email"></div>
+                    </div>
+                    <div>
+                        <div class="font-bold">Phone:</div>
+                        <div id="phone"></div>
+                    </div>
+                    <div>
+                        <div class="font-bold">Business/Orginzation Name:</div>
+                        <div id="business-name"></div>
+                    </div>
+                    <div>
+                        <div class="font-bold">Registration Date:</div>
+                        <div id="timestamp"></div>
+                    </div>
+                </div>
+            </div>
         </main>
         <footer>
             <div>
@@ -80,16 +108,4 @@
             </div>
         </footer>
     </body>
-    <dialog id="np-level-modal" class="modal">
-        NP Level
-    </dialog>
-    <dialog id="bronze-level-modal" class="modal">
-        Bronze Level
-    </dialog>
-    <dialog id="silver-level-modal" class="modal">
-        Silver Level
-    </dialog>
-    <dialog id="gold-level-modal" class="modal">
-        Gold Level
-    </dialog>
 </html>

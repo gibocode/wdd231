@@ -4,14 +4,14 @@ main {
 
 .content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
     margin: 20px auto;
     max-width: 1200px;
 }
 
 form {
-    padding: 40px;
+    padding: 25px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
@@ -39,10 +39,13 @@ form {
 }
 
 .modal {
-    margin: 0 auto;
-    top: 10px;
+    margin: 0 20px;
+    top: 10vh;
     background-color: #fff;
     border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    animation: 0.3s linear forwards appear2;
 }
 
 .modal > div {
@@ -58,6 +61,7 @@ form {
     background-color: var(--primary-color);
     color: #fff;
     padding: 20px;
+    text-align: center;
 }
 
 .modal-body {
@@ -76,4 +80,197 @@ form {
 
 .bg-primary {
     background-color: var(--primary-color);
+}
+
+.membership-levels-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.membership-levels {
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 30px 20px 25px;
+    background-color: #fff;
+    transition: all 0.2s linear;
+    opacity: 0;
+    animation: 0.5s linear forwards appear;
+}
+
+.membership-levels:hover {
+    transform: scale(1.1);
+}
+
+.membership-levels img {
+    width: 100px;
+    height: 100px;
+}
+
+.membership-levels > div:first-of-type {
+    display: flex;
+    justify-content: center;
+}
+
+.membership-levels > div:last-of-type {
+    display: flex;
+    flex-direction: column;
+}
+
+.membership-levels > div:last-of-type > div:first-of-type {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.membership-levels button {
+    margin-top: 5px;
+}
+
+.animation-delay-1 {
+    animation-delay: 0.2s;
+}
+
+.animation-delay-2 {
+    animation-delay: 0.4s;
+}
+
+.animation-delay-3 {
+    animation-delay: 0.6s;
+}
+
+.required::before {
+    content: "*";
+    color: #ff0000;
+}
+
+.text-sm {
+    font-size: 0.9rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.sm-flex-column {
+    flex-direction: column;
+}
+
+.w-100 {
+    width: 100px;
+}
+
+.h-100 {
+    height: 100px;
+}
+
+.text-lg {
+    font-size: 1.5rem;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.sm-self-center {
+    align-self: center;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.ms-30 {
+    margin-left: 30px;
+}
+
+.m-auto {
+    margin: 0 auto;
+}
+
+.card {
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.card-md {
+    max-width: 800px;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 10px 10px 20px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-body > div {
+
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes appear2 {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (min-width: 420px) {
+    .lg-flex-row {
+        flex-direction: row;
+    }
+    .lg-self-auto {
+        align-self: auto;
+    }
+    .card-body {
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    form {
+        padding: 40px;
+    }
+    .content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .modal {
+        margin: 0 auto;
+    }
 }

@@ -55,12 +55,12 @@
             <div class="content">
                 <form action="thankyou.html">
                     <div class="form-group">
-                        <label>First Name:
+                        <label class="required">First Name:
                             <input class="form-control" type="text" name="firstname" title="First Name" autocomplete="on" required>
                         </label>
                     </div>
                     <div class="form-group">
-                        <label>Last Name:
+                        <label class="required">Last Name:
                             <input class="form-control" type="text" name="lastname" title="Last Name" autocomplete="on" required>
                         </label>
                     </div>
@@ -70,17 +70,17 @@
                         </label>
                     </div>
                     <div class="form-group">
-                        <label>Email Address:
+                        <label class="required">Email:
                             <input class="form-control" type="email" name="email" title="Email Address" autocomplete="email" placeholder="email@example.com" required>
                         </label>
                     </div>
                     <div class="form-group">
-                        <label>Mobile Phone Number:
+                        <label class="required">Phone Number:
                             <input class="form-control" type="tel" name="phone" title="Mobile Phone Number" autocomplete="tel" required>
                         </label>
                     </div>
                     <div class="form-group">
-                        <label>Business/Organization's Name:
+                        <label class="required">Business/Organization's Name:
                             <input class="form-control" type="text" name="business-name" title="Business/Organization's Name" autocomplete="organization" required>
                         </label>
                     </div>
@@ -102,30 +102,51 @@
                     </div>
                     <input type="hidden" name="timestamp" id="timestamp">
                     <button type="submit" class="btn btn-secondary btn-lg self-right">Submit</button>
+                    <div class="required text-sm">required fields</div>
                 </form>
-                <div>
-                    <div>
-                        <div>Non-Profit Membership Level</div>
+                <div class="membership-levels-container">
+                    <div class="membership-levels">
                         <div>
-                            <button class="learn-more-button btn btn-secondary " data-id="np">Learn More</button>
+                            <img src="images/np_membership.svg" alt="Non-Profit Membership Level">
+                        </div>
+                        <div>
+                            <div>Non-Profit Membership Level</div>
+                            <div>
+                                <button class="learn-more-button btn btn-secondary " data-id="np">Learn More</button>
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <div>Bronze Membership Level</div>
+                    <div class="membership-levels animation-delay-1">
                         <div>
-                            <button class="learn-more-button btn btn-secondary " data-id="bronze">Learn More</button>
+                            <img src="images/bronze_membership.svg" alt="Bronze Membership Level">
+                        </div>
+                        <div>
+                            <div>Bronze Membership Level</div>
+                            <div>
+                                <button class="learn-more-button btn btn-secondary " data-id="bronze">Learn More</button>
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <div>Silver Membership Level</div>
+                    <div class="membership-levels animation-delay-2">
                         <div>
-                            <button class="learn-more-button btn btn-secondary " data-id="silver">Learn More</button>
+                            <img src="images/silver_membership.svg" alt="Silver Membership Level">
+                        </div>
+                        <div>
+                            <div>Silver Membership Level</div>
+                            <div>
+                                <button class="learn-more-button btn btn-secondary " data-id="silver">Learn More</button>
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <div>Gold Membership Level</div>
+                    <div class="membership-levels animation-delay-3">
                         <div>
-                            <button class="learn-more-button btn btn-secondary " data-id="gold">Learn More</button>
+                            <img src="images/gold_membership.svg" alt="Gold Membership Level">
+                        </div>
+                        <div>
+                            <div>Gold Membership Level</div>
+                            <div>
+                                <button class="learn-more-button btn btn-secondary " data-id="gold">Learn More</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -157,33 +178,109 @@
                 <div id="last-modified"></div>
             </div>
         </footer>
+        <dialog id="np-level-modal" class="modal modal-md">
+            <div class="modal-header bg-primary">Non-Profit Membership Level</div>
+            <div class="modal-body">
+                <div class="text-lg font-bold mb-20">Non-Profit Membership Level</div>
+                <div class="flex sm-flex-column lg-flex-row">
+                    <img src="images/np_membership.svg" class="w-100 h-100 sm-self-center lg-self-auto mb-20" alt="Non-Profit Membership Level">
+                    <div>
+                        <div><span class="font-bold">Annual Fee:</span> $100</div>
+                        <div><span class="font-bold">Ideal for:</span> Registered 501(c)(3) organizations, schools, and charities.</div>
+                        <br>
+                        <div class="font-bold">Benefits:</div>
+                        <ul class="mt-10 ms-30">
+                            <li>Listing in the online business directory</li>
+                            <li>Access to member-only events and newsletters</li>
+                            <li>Free posting on community calendar</li>
+                            <li>Discounted rates for event sponsorships</li>
+                            <li>Recognition as a non-profit member at events</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default close-modal-button" data-modal-id="np">Close</button>
+            </div>
+        </dialog>
+        <dialog id="bronze-level-modal" class="modal modal-md">
+            <div class="modal-header bg-primary">Bronze Membership Level</div>
+            <div class="modal-body">
+                <div class="text-lg font-bold mb-20">Bronze Membership Level</div>
+                <div class="flex sm-flex-column lg-flex-row">
+                    <img src="images/bronze_membership.svg" class="w-100 h-100 sm-self-center lg-self-auto mb-20" alt="Bronze Membership Level">
+                    <div>
+                        <div><span class="font-bold">Annual Fee:</span> $250</div>
+                        <div><span class="font-bold">Ideal for:</span> Small businesses and start-ups looking to increase local visibility.</div>
+                        <br>
+                        <div class="font-bold">Benefits:</div>
+                        <ul class="mt-10 ms-30">
+                            <li>All Non-Profit benefits, plus:</li>
+                            <li>Business profile with logo and link on Chamber website</li>
+                            <li>Ribbon cutting ceremony for new business or anniversary</li>
+                            <li>One complimentary event admission per quarter</li>
+                            <li>Social media welcome post</li>
+                            <li>Member window decal</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default close-modal-button" data-modal-id="bronze">Close</button>
+            </div>
+        </dialog>
+        <dialog id="silver-level-modal" class="modal modal-md">
+            <div class="modal-header bg-primary">Silver Membership Level</div>
+            <div class="modal-body">
+                <div class="text-lg font-bold mb-20">Silver Membership Level</div>
+                <div class="flex sm-flex-column lg-flex-row">
+                    <img src="images/silver_membership.svg" class="w-100 h-100 sm-self-center lg-self-auto mb-20" alt="Silver Membership Level">
+                    <div>
+                        <div><span class="font-bold">Annual Fee:</span> $500</div>
+                        <div><span class="font-bold">Ideal for:</span> Growing businesses wanting to expand their network and reach.</div>
+                        <br>
+                        <div class="font-bold">Benefits:</div>
+                        <ul class="mt-10 ms-30">
+                            <li>All Bronze benefits, plus:</li>
+                            <li>Priority placement in online directory</li>
+                            <li>Two complimentary event admissions per quarter</li>
+                            <li>One e-newsletter spotlight per year</li>
+                            <li>Discounted advertising in Chamber publications</li>
+                            <li>Eligibility to serve on committees</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default close-modal-button" data-modal-id="silver">Close</button>
+            </div>
+        </dialog>
+        <dialog id="gold-level-modal" class="modal modal-md">
+            <div class="modal-header bg-primary">Gold Membership Level</div>
+            <div class="modal-body">
+                <div class="text-lg font-bold mb-20">Gold Membership Level</div>
+                <div class="flex sm-flex-column lg-flex-row">
+                    <img src="images/gold_membership.svg" class="w-100 h-100 sm-self-center lg-self-auto mb-20" alt="Gold Membership Level">
+                    <div>
+                        <div><span class="font-bold">Annual Fee:</span> $1,000</div>
+                        <div><span class="font-bold">Ideal for:</span> Established businesses and leaders seeking maximum exposure and influence.</div>
+                        <br>
+                        <div class="font-bold">Benefits:</div>
+                        <ul class="mt-10 ms-30">
+                            <li>All Silver benefits, plus:</li>
+                            <li>Premium directory listing with featured placement</li>
+                            <li>Unlimited complimentary event admissions</li>
+                            <li>One sponsored social media post per quarter</li>
+                            <li>Invitation to exclusive Gold Member roundtable events</li>
+                            <li>Logo placement on Chamber homepage and event banners</li>
+                            <li>First right of refusal for event sponsorships</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default close-modal-button" data-modal-id="gold">Close</button>
+            </div>
+        </dialog>
     </body>
-    <dialog id="np-level-modal" class="modal modal-md">
-        <div class="modal-header bg-primary">Non-Profit Membership Level</div>
-        <div class="modal-body">TEST</div>
-        <div class="modal-footer">
-            <button class="btn btn-default close-modal-button" data-modal-id="np">Close</button>
-        </div>
-    </dialog>
-    <dialog id="bronze-level-modal" class="modal modal-md">
-        <div class="modal-header bg-primary">Bronze Membership Level</div>
-        <div class="modal-body">TEST</div>
-        <div class="modal-footer">
-            <button class="btn btn-default close-modal-button" data-modal-id="bronze">Close</button>
-        </div>
-    </dialog>
-    <dialog id="silver-level-modal" class="modal modal-md">
-        <div class="modal-header bg-primary">Silver Membership Level</div>
-        <div class="modal-body">TEST</div>
-        <div class="modal-footer">
-            <button class="btn btn-default close-modal-button" data-modal-id="silver">Close</button>
-        </div>
-    </dialog>
-    <dialog id="gold-level-modal" class="modal modal-md">
-        <div class="modal-header bg-primary">Gold Membership Level</div>
-        <div class="modal-body">TEST</div>
-        <div class="modal-footer">
-            <button class="btn btn-default close-modal-button" data-modal-id="gold">Close</button>
-        </div>
-    </dialog>
 </html>
