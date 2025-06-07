@@ -3,22 +3,22 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Directory | Timbuktu Chamber of Commerce</title>
-        <meta name="description" content="Explore a comprehensive list of local businesses and organizations that are proud members of the Chamber of Commerce.">
+        <title>Discover | Timbuktu Chamber of Commerce</title>
+        <meta name="description" content="Discover the rich culture, history, and business opportunities of Timbuktu. Explore local attractions, events, and vibrant community life through the Timbuktu Chamber of Commerce.">
         <meta name="author" content="Gilbor Camporazo Jr.">
-        <meta property="og:title" content="Directory | Timbuktu Chamber of Commerce">
-        <meta property="og:description" content="Explore a comprehensive list of local businesses and organizations that are proud members of the Chamber of Commerce.">
+        <meta property="og:title" content="Discover | Timbuktu Chamber of Commerce">
+        <meta property="og:description" content="Discover the rich culture, history, and business opportunities of Timbuktu. Explore local attractions, events, and vibrant community life through the Timbuktu Chamber of Commerce.">
         <meta property="og:image" content="https://gibocode.github.io/wdd231/chamber/images/logo_xlarge.webp">
-        <meta property="og:url" content="https://gibocode.github.io/wdd231/chamber/directory.html">
+        <meta property="og:url" content="https://gibocode.github.io/wdd231/chamber/discover.html">
         <link rel="icon" href="images/favicon.ico">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/style.css">
-        <link rel="stylesheet" href="styles/directory.css">
+        <link rel="stylesheet" href="styles/discover.css">
         <script src="scripts/script.js" defer></script>
-        <script src="scripts/directory.js" defer></script>
+        <script src="scripts/discover.js" defer></script>
     </head>
     <body>
         <div id="header-container">
@@ -39,81 +39,19 @@
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="directory.html">Directory</a>
+                        <a class="nav-link" href="directory.html">Directory</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="join.html">Join</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="discover.html">Discover</a>
+                        <a class="nav-link active" href="discover.html">Discover</a>
                     </li>
                 </ul>
             </nav>
         </div>
         <main>
-            <section>
-                <h1>Directory</h1>
-                <div>
-                    <button class="button" type="button" id="grid-button" aria-label="Display grid" title="Grid">
-                        <svg width="25" height="25" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7 1H1V7H7V1ZM7 9H1V15H7V9ZM9 1H15V7H9V1ZM15 9H9V15H15V9Z"/>
-                        </svg>
-                    </button>
-                    <button class="button" type="button" id="list-button" aria-label="Display list" title="List">
-                        <svg width="25" height="25" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 1H1V3H3V1Z"/>
-                            <path d="M3 5H1V7H3V5Z"/>
-                            <path d="M1 9H3V11H1V9Z"/>
-                            <path d="M3 13H1V15H3V13Z"/>
-                            <path d="M15 1H5V3H15V1Z"/>
-                            <path d="M15 5H5V7H15V5Z"/>
-                            <path d="M5 9H15V11H5V9Z"/>
-                            <path d="M15 13H5V15H15V13Z"/>
-                        </svg>
-                    </button>
-                </div>
-                <div>
-                    <ul id="member-list">
-                        <li id="members-placeholder"></li>
-                    </ul>
-                </div>
-            </section>
-            <template id="member-template">
-                <li class="member-item">
-                    <div class="member-name"></div>
-                    <div class="member-info">
-                        <div class="image-container">
-                            <picture>
-                                <source srcset="images/placeholder.webp" class="member-image-large" media="(min-width: 768px)">
-                                <source srcset="images/placeholder.webp" class="member-image-medium" media="(min-width: 480px)">
-                                <img src="images/placeholder.webp" alt="" class="member-image" width="auto" height="auto">
-                            </picture>
-                        </div>
-                        <div>
-                            <div>
-                                <img src="images/email_icon.svg" loading="lazy" alt="Email" width="20" height="20">
-                                <a href="#" class="member-email"></a>
-                            </div>
-                            <div>
-                                <img src="images/phone_icon.svg" loading="lazy" alt="Phone" width="18" height="18">
-                                <a href="#" class="member-phone"></a>
-                            </div>
-                            <div>
-                                <img src="images/web_icon.svg" loading="lazy" alt="Url" width="20" height="20">
-                                <a href="#" class="member-url"></a>
-                            </div>
-                            <div>
-                                <img src="images/address_icon.svg" loading="lazy" alt="Address" width="20" height="20">
-                                <span class="member-address"></span>
-                            </div>
-                            <div>
-                                <img src="images/level_icon.svg" loading="lazy" alt="Level" width="20" height="20">
-                                <span class="member-level"></span>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </template>
+
         </main>
         <footer>
             <div>
