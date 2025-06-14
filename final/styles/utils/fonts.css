@@ -1,0 +1,15 @@
+.uppercase {
+    text-transform: uppercase;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-lg {
+    font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.white-space-nowrap {
+    white-space: nowrap;
+}
