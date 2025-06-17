@@ -1,0 +1,176 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    padding: 20px;
+    margin-bottom: 20px;
+    flex: 1;
+    position: relative;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.skeleton {
+    width: 100%;
+    background-color: rgba(0,0,0,0.1);
+    animation: 1.5s ease-in-out infinite pulse;
+    opacity: 0;
+    height: 451px;
+}
+
+#card-container {
+    display: grid;
+    gap: 20px;
+}
+
+.card {
+    box-shadow: 0 0 10px #0000002b;
+    padding: 20px;
+    display: grid;
+    grid-template-areas:
+        "title"
+        "image"
+        "address"
+        "description"
+        "button";
+}
+
+.card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    grid-area: title;
+}
+
+.card figure {
+    margin-bottom: 10px;
+    grid-area: image;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card address {
+    margin-bottom: 10px;
+    grid-area: address;
+}
+
+.card p {
+    margin-bottom: 20px;
+    grid-area: description;
+}
+
+.card .btn {
+    padding: 10px 20px;
+    display: flex;
+    justify-self: center;
+    margin-bottom: 10px;
+    grid-area: button;
+    align-items: center;
+    max-height: 50px;
+}
+
+.alert {
+    display: none;
+    background-color: #d5daff;
+    border: 1px solid #adb3e0;
+    color: var(--primary-color);
+    padding: 10px 45px 10px 20px;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    z-index: 1000;
+    margin: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+}
+
+.alert.show {
+    display: flex;
+    animation: 0.3s ease-in fadeIn;
+    animation-fill-mode: forwards;
+}
+
+.close-message::after {
+    content: "\00d7";
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Medium Screens */
+@media screen and (min-width: 641px) {
+    .card {
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+            "image title"
+            "image address"
+            "image description"
+            "image button";
+    }
+    .card figure {
+        margin-right: 20px;
+        display: flex;
+    }
+    .card img {
+        width: 300px;
+        height: 200px;
+        transition: all 0.1s linear;
+    }
+    .card img:hover {
+        transform: scale(105%);
+    }
+    .card .btn {
+        padding: 10px 30px;
+    }
+}
+
+/* Large Screens */
+@media screen and (min-width: 1025px) {
+    .skeleton {
+        height: 285px;
+    }
+    #card-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .card {
+        grid-template-areas:
+            "title title"
+            "image address"
+            "image description"
+            "image button";
+    }
+}

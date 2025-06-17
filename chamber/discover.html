@@ -51,7 +51,21 @@
             </nav>
         </div>
         <main>
-
+            <div class="alert">
+                <span class="message"></span>
+                <span class="close-message"></span>
+            </div>
+            <h1>Discover</h1>
+            <div id="card-container">
+                <div class="skeleton"></div>
+                <div class="skeleton"></div>
+                <div class="skeleton"></div>
+                <div class="skeleton"></div>
+                <div class="skeleton"></div>
+                <div class="skeleton"></div>
+                <div class="skeleton"></div>
+                <div class="skeleton"></div>
+            </div>
         </main>
         <footer>
             <div>
@@ -79,5 +93,19 @@
                 <div id="last-modified"></div>
             </div>
         </footer>
+        <template id="card-template">
+            <div class="card">
+                <h2 class="title"></h2>
+                <figure>
+                    <picture>
+                        <source class="image-large" media="(min-width: 1025px)" srcset="">
+                        <img class="image" src="" alt="" width="300" height="200">
+                    </picture>
+                </figure>
+                <address class="address"></address>
+                <p class="description"></p>
+                <button class="btn btn-primary">Learn More</button>
+            </div>
+        </template>
     </body>
 </html>

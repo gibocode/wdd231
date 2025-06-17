@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Modern Art Museum of Fort Worth",
+        "address": "3200 Darnell St, Fort Worth, TX 76107, USA",
+        "description": "Postwar and contemporary art museum housed in serene reflecting\u2011pond surroundings.",
+        "image": "modern_art_museum_of_fort_worth.webp"
+    },
+    {
+        "name": "Les Papilles",
+        "address": "30 Rue Gay-Lussac, 75005 Paris, France",
+        "description": "Cozy French bistro serving classic dishes in a charming ambiance.",
+        "image": "les_papilles.webp"
+    },
+    {
+        "name": "The Grotto Spa",
+        "address": "1000 Resort Dr, Parksville, BC V9P 2E3, Canada",
+        "description": "Luxury spa with cave-like pools, mineral baths, and holistic treatments.",
+        "image": "the_grotto_spa.webp"
+    },
+    {
+        "name": "Elephant Nature Park",
+        "address": "Chiang Mai, Thailand",
+        "description": "Ethical elephant rescue and rehabilitation sanctuary where visitors interact responsibly.",
+        "image": "elephant_nature_park.webp"
+    },
+    {
+        "name":  "Dharavi Leather Goods Workshop",
+        "address": "Dharavi, Mumbai, India",
+        "description": "Artisan leather workshop producing handcrafted goods in one of Mumbai\u2019s bustling districts.",
+        "image": "dharavi_leather_goods_workshop.webp"
+    },
+    {
+        "name": "Fujiyama Sushi",
+        "address": "Avenida Paulista, S\u00e3o Paulo, Brazil",
+        "description": "Modern sushi restaurant offering traditional Japanese menus in a sleek urban setting.",
+        "image": "fujiyama_sushi.webp"
+    },
+    {
+        "name": "Kinokuniya Bookstore",
+        "address": "1073 6th Ave, New York, NY 10018, USA",
+        "description": "Japanese bookstore offering a vast selection of books, manga, stationery, and cultural items.",
+        "image": "kinokuniya_bookstore.webp"
+    },
+    {
+        "name": "Hasami Porcelain Shop",
+        "address": "Hasami, Higashisonogi District, Nagasaki, Japan",
+        "description": "Specialist porcelain store showcasing traditional Hasami ware crafted in the region.",
+        "image": "hasami_porcelain_shop.webp"
+    }
+]
