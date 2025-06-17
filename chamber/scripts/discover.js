@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     renderCards();
 
+    // LOCAL STORAGE
     function getLastVisitTimestamp() {
         let lastVisitTimestamp = localStorage.getItem("last-visit-timestamp");
         if (lastVisitTimestamp == null) {
