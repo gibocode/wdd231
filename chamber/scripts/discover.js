@@ -15,9 +15,9 @@ async function renderCards() {
         const description = clone.querySelector('.description');
 
         title.textContent = card.name;
-        image.src = `${window.location.origin}/chamber/images/${card.image}`;
+        image.src = `./images/${card.image}`;
         image.alt = `${card.name} Image`;
-        imageLarge.srcset = `${window.location.origin}/chamber/images/${card.image.replace(".webp", "_large.webp")}`;
+        imageLarge.srcset = `./images/${card.image.replace(".webp", "_large.webp")}`;
         address.textContent = card.address;
         description.innerHTML = card.description;
 
