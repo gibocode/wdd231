@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         container.innerHTML = "";
 
-        data.forEach(card => {
+        data.forEach((card, index) => {
             const clone = document.importNode(template.content, true);
             const title = clone.querySelector('.title');
             const image = clone.querySelector('.image');
@@ -18,11 +18,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
             title.textContent = card.name;
             image.src = `./images/${card.image}`;
-            // image.src = `./images/${card.image.replace(".webp", "_large.webp")}`;
             image.alt = `${card.name} Image`;
             imageLarge.srcset = `./images/${card.image.replace(".webp", "_large.webp")}`;
             address.textContent = card.address;
             description.innerHTML = card.description;
+
+            if (index <= 1) {
+                image.fetchPriority = "high";
+            }
+            else {
+                image.loading = "lazy";
+            }
 
             container.appendChild(clone);
         });
