@@ -1,85 +1,87 @@
-// Display Cards
-async function renderCards() {
-    const container = document.querySelector("#card-container");
-    const template = document.querySelector("#card-template");
-    const data = await getDiscoverData();
+document.addEventListener("DOMContentLoaded", () => {
 
-    container.innerHTML = "";
+    // Display Cards
+    async function renderCards() {
+        const container = document.querySelector("#card-container");
+        const template = document.querySelector("#card-template");
+        const data = await getDiscoverData();
 
-    data.forEach(card => {
-        const clone = document.importNode(template.content, true);
-        const title = clone.querySelector('.title');
-        const image = clone.querySelector('.image');
-        const imageLarge = clone.querySelector('.image-large');
-        const address = clone.querySelector('.address');
-        const description = clone.querySelector('.description');
+        container.innerHTML = "";
 
-        title.textContent = card.name;
-        image.src = `./images/${card.image}`;
-        image.alt = `${card.name} Image`;
-        imageLarge.srcset = `./images/${card.image.replace(".webp", "_large.webp")}`;
-        address.textContent = card.address;
-        description.innerHTML = card.description;
+        data.forEach(card => {
+            const clone = document.importNode(template.content, true);
+            const title = clone.querySelector('.title');
+            const image = clone.querySelector('.image');
+            const imageLarge = clone.querySelector('.image-large');
+            const address = clone.querySelector('.address');
+            const description = clone.querySelector('.description');
 
-        container.appendChild(clone);
-    });
-}
+            title.textContent = card.name;
+            image.src = `./images/${card.image}`;
+            // image.src = `./images/${card.image.replace(".webp", "_large.webp")}`;
+            image.alt = `${card.name} Image`;
+            imageLarge.srcset = `./images/${card.image.replace(".webp", "_large.webp")}`;
+            address.textContent = card.address;
+            description.innerHTML = card.description;
 
-async function getDiscoverData() {
-    const response = await fetch("data/discover.json");
-    const data = response.json();
-    return data;
-}
+            container.appendChild(clone);
+        });
+    }
 
-const loadCards = setTimeout(renderCards(), 2000);
+    async function getDiscoverData() {
+        const response = await fetch("data/discover.json");
+        const data = response.json();
+        return data;
+    }
 
-clearInterval(loadCards);
+    renderCards();
 
-function getLastVisitTimestamp() {
-    let lastVisitTimestamp = localStorage.getItem("last-visit-timestamp");
-    if (lastVisitTimestamp == null) {
-        lastVisitTimestamp = Date.now();
-        localStorage.setItem("last-visit-timestamp", lastVisitTimestamp);
-        lastVisitTimestamp = localStorage.getItem("last-visit-timestamp");
+    function getLastVisitTimestamp() {
+        let lastVisitTimestamp = localStorage.getItem("last-visit-timestamp");
+        if (lastVisitTimestamp == null) {
+            lastVisitTimestamp = Date.now();
+            localStorage.setItem("last-visit-timestamp", lastVisitTimestamp);
+            lastVisitTimestamp = localStorage.getItem("last-visit-timestamp");
+            return 0;
+        }
+        return lastVisitTimestamp;
+    }
+
+    function getDaysSinceLastVisit() {
+        // Test
+        // const currentTimestamp = Date.now() + (1000 * 3600 * 0);
+        const currentTimestamp = Date.now();
+        const lastVisitTimestamp = getLastVisitTimestamp();
+        if (lastVisitTimestamp != 0) {
+            const difference = currentTimestamp - lastVisitTimestamp;
+            const days = difference / 1000 / 3600 / 24;
+            return days;
+        }
         return 0;
     }
-    return lastVisitTimestamp;
-}
 
-function getDaysSinceLastVisit() {
-    // Test
-    // const currentTimestamp = Date.now() + (1000 * 3600 * 0);
-    const currentTimestamp = Date.now();
-    const lastVisitTimestamp = getLastVisitTimestamp();
-    if (lastVisitTimestamp != 0) {
-        const difference = currentTimestamp - lastVisitTimestamp;
-        const days = difference / 1000 / 3600 / 24;
-        return days;
+    const days = getDaysSinceLastVisit();
+    const alert = document.querySelector(".alert");
+    const message = document.querySelector(".message");
+    let messageText = "";
+
+    if (days == 0) {
+        messageText = "Welcome! Let us know if you have any questions.";
     }
-    return 0;
-}
+    else if (days < 1) {
+        messageText = "Back so soon! Awesome!";
+    } else {
+        messageText = `You last visited ${days.toFixed(0)} days ago.`;
+    }
 
-const days = getDaysSinceLastVisit();
-const alert = document.querySelector(".alert");
-const message = document.querySelector(".message");
-let messageText = "";
+    message.innerHTML = messageText;
+    alert.classList.add("show");
 
-if (days == 0) {
-    messageText = "Welcome! Let us know if you have any questions.";
-}
-else if (days < 1) {
-    messageText = "Back so soon! Awesome!";
-} else {
-    messageText = `You last visited ${days.toFixed(0)} days ago.`;
-}
+    function hideMessage() {
+        alert.classList.remove("show");
+    }
 
-message.innerHTML = messageText;
-alert.classList.add("show");
-
-function hideMessage() {
-    alert.classList.remove("show");
-}
-
-document.querySelector(".close-message").addEventListener("click", () => {
-    hideMessage();
+    document.querySelector(".close-message").addEventListener("click", () => {
+        hideMessage();
+    });
 });
