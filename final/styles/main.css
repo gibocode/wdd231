@@ -294,18 +294,18 @@ header > div > div > span {
     font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
-#logo-title {
+footer > div > div > div > div:first-child {
     display: flex;
     margin-bottom: 20px;
 }
 
-#logo-title > span {
+footer > div > div > div > div:first-child > span {
     font-weight: bold;
     color: var(--white);
     font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
-header img, #logo-title img {
+header img, footer > div > div > div > div:first-child img {
     width: 50px;
     margin-right: 10px;
 }
@@ -506,7 +506,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-#events h2, #featured h2, #gallery h2, .newsletter-label  {
+#events h2, #featured h2, #gallery h2, footer > div > div > div:last-child > div {
     margin-bottom: 20px;
     text-align: center;
     border-bottom: 5px solid var(--secondary-color);
@@ -649,22 +649,22 @@ footer > div > div {
     margin-right: 10px;
 }
 
-#sitemaps > div {
+footer > div > div > div:nth-child(2) > div {
     color: var(--white);
     margin-bottom: 20px;
     font-size: clamp(1.2rem, 3vw, 1.7rem);
 }
 
-#sitemaps ul {
+footer > div > div > div:nth-child(2) ul {
     color: var(--white);
     list-style: none;
 }
 
-#sitemaps li {
+footer > div > div > div:nth-child(2) li {
     margin-bottom: 10px;
 }
 
-#sitemaps a {
+footer > div > div > div:nth-child(2) a {
     text-decoration: none;
     color: var(--white);
 }
