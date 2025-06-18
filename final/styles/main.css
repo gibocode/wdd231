@@ -314,7 +314,7 @@ main {
     flex: 1;
 }
 
-.menu {
+#menu {
     background-color: var(--secondary-color);
     width: 100%;
     list-style: none;
@@ -325,12 +325,12 @@ main {
     z-index: 1000;
 }
 
-.menu li {
+#menu li {
     display: flex;
     margin: 0 5px;
 }
 
-.menu a {
+#menu a {
     text-decoration: none;
     text-transform: uppercase;
     color: var(--primary-color);
@@ -342,15 +342,15 @@ main {
     transition: all 0.2s ease-in-out;
 }
 
-.menu a:hover {
+#menu a:hover {
     filter: brightness(0.9);
 }
 
-.menu a.active {
+#menu a.active {
     filter: brightness(1.2);
 }
 
-.menu-button {
+#menu-button {
     padding: 5px;
     margin-right: 20px;
 }
@@ -373,7 +373,7 @@ h1 {
     text-align: center;
 }
 
-#hero h2 {
+.hero h2 {
     color: var(--white);
     text-align: center;
     font-weight: bold;
@@ -381,7 +381,7 @@ h1 {
     background-color: var(--primary-color);
 }
 
-#hero > div > div > div {
+.hero > div > div > div {
     background-color: var(--primary-color);
     text-align: center;
     color: var(--gray);
@@ -389,18 +389,18 @@ h1 {
     font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
-#hero {
+.hero {
     overflow: hidden;
 }
 
-#hero picture {
+.hero picture {
     aspect-ratio: 206 / 135;
     overflow: hidden;
     width: 100%;
     position: relative;
 }
 
-#hero img {
+.hero img {
     display: flex;
     justify-self: center;
     width: 100%;
@@ -408,13 +408,13 @@ h1 {
     object-fit: cover;
 }
 
-#hero > div {
+.hero > div {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
 }
 
-#hero > div > div {
+.hero > div > div {
     position: relative;
     padding: 40px 20px;
     background-color: var(--primary-color);

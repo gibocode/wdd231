@@ -3,10 +3,10 @@
         flex-direction: row;
         padding: 20px;
     }
-    .menu-button {
+    #menu-button {
         display: none;
     }
-    .menu {
+    #menu {
         display: flex !important;
         flex-direction: row;
         position: relative;
@@ -14,17 +14,17 @@
         padding-bottom: 0;
         background-color: transparent;
     }
-    .menu a {
+    #menu a {
         background-color: var(--primary-color);
         color: var(--secondary-color);
         padding: 10px 15px;
     }
-    .menu a.active {
+    #menu a.active {
         background-color: var(--secondary-color);
         color: var(--primary-color);
         filter: brightness(1);
     }
-    .menu a:not(.active):hover {
+    #menu a:not(.active):hover {
         filter: brightness(1.2);
         color: var(--secondary-color);
     }
@@ -42,7 +42,7 @@
     header > div > div:last-child {
         margin-bottom: 0;
     }
-    #hero h2 {
+    .hero h2 {
         color: var(--primary-color);
         text-align: left;
         width: fit-content;
@@ -51,16 +51,16 @@
         padding: 10px 20px;
         margin-bottom: 10px;
     }
-    #hero > div > div > div {
+    .hero > div > div > div {
         width: fit-content;
     }
-    #hero > div > div {
+    .hero > div > div {
         top: -250px;
         position: absolute;
         background-color: transparent;
         left: 20px;
     }
-    #hero img {
+    .hero img {
         width: 110%;
     }
     #donations > div {
@@ -85,7 +85,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-    #hero > div > div {
+    .hero > div > div {
         top: -300px;
     }
     #donations {
