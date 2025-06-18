@@ -6,7 +6,15 @@
         <title>Home | Global NGO Insights</title>
         <meta name="description" content="Discover impactful NGOs around the world with Global NGO Insights. Explore missions, projects, and global development data — all in one place. Stay informed with the latest nonprofit news and learn how to support meaningful causes.">
         <meta name="author" content="Gilbor Camporazo Jr.">
+        <meta property="og:title" content="Home | Global NGO Insights">
+        <meta property="og:description" content="Discover impactful NGOs around the world with Global NGO Insights. Explore missions, projects, and global development data — all in one place. Stay informed with the latest nonprofit news and learn how to support meaningful causes.">
+        <meta property="og:image" content="images/logo_large.webp">
+        <meta property="og:url" content="https://gibocode.github.io/wdd231/final/index.html">
         <link rel="icon" href="images/favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
         <link href="styles/main.css" rel="stylesheet">
         <script src="scripts/main.mjs" type="module"></script>
     </head>
@@ -44,18 +52,19 @@
             </div>
         </header>
         <main>
-            <section class="hero">
+            <div class="hero">
                 <picture class="hero-wrapper">
                     <source srcset="images/hero_large.webp" type="image/webp" media="(min-width: 768px)">
                     <img src="images/hero_small.webp" alt="Global NGO Insights Hero Image" class="w-full h-auto hero-image" width="412" height="270">
                 </picture>
                 <div class="max-w-1200 mx-auto relative">
-                    <div class="left-20 lg-top--150 xl-top--300 lg-absolute">
-                        <h2 class="uppercase text-center text-bold text-lg bg-white py-10 px-20 lg-mb-10">Global Impact, Local Change</h2>
-                        <div class="bg-primary text-center text-white lg-w-fit text-md p-5 px-10">Discover. Learn. Support.</div>
+                    <div class="left-20 lg-top--250 xl-top--300 lg-absolute px-20 py-40 bg-primary lg-bg-transparent">
+                        <h1 class="uppercase text-secondary bg-primary lg-bg-transparent text-lg lg-text-3xl text-center lg-text-left">Global NGO Insights</h1>
+                        <h2 class="text-white lg-text-primary text-center lg-text-left lg-w-fit text-bold text-md lg-text-lg bg-primary lg-bg-white lg-py-10 lg-px-20 lg-mb-10">Global Impact, Local Change</h2>
+                        <div class="bg-primary text-center text-gray lg-w-fit text-sm p-5 px-10">Discover. Learn. Support.</div>
                     </div>
                 </div>
-            </section>
+            </div>
             <div class="donations bg-secondary grid lg-grid-cols-3">
                 <div>
                     <div class="flex w-fit justify-self-center">
@@ -117,7 +126,7 @@
                     </div>
                 </div>
             </section>
-            <section class="featured w-full p-40 bg-white">
+            <section class="w-full p-40 bg-white">
                 <div class="max-w-1200 mx-auto">
                     <h2 class="mb-20 text-center text-lg border-bottom-secondary border-5 pb-20">Featured News</h2>
                     <div class="grid lg-grid-cols-3 gap-20" id="featured-news"></div>
@@ -125,16 +134,7 @@
             </section>
             <section class="gallery w-full bg-secondary">
                 <h2 class="mb-20 text-center text-lg border-bottom-primary border-5 pb-20">Gallery</h2>
-                <div class="grid md-grid-cols-2 lg-grid-cols-4 gap-10" id="gallery-container">
-                    <!-- <img src="https://placehold.co/600x500" alt="Gallery Image 1" class="w-full h-auto">
-                    <img src="https://placehold.co/600x500" alt="Gallery Image 1" class="w-full h-auto">
-                    <img src="https://placehold.co/600x500" alt="Gallery Image 1" class="w-full h-auto">
-                    <img src="https://placehold.co/600x500" alt="Gallery Image 1" class="w-full h-auto">
-                    <img src="https://placehold.co/600x500" alt="Gallery Image 1" class="w-full h-auto">
-                    <img src="https://placehold.co/600x500" alt="Gallery Image 1" class="w-full h-auto">
-                    <img src="https://placehold.co/600x500" alt="Gallery Image 1" class="w-full h-auto">
-                    <img src="https://placehold.co/600x500" alt="Gallery Image 1" class="w-full h-auto"> -->
-                </div>
+                <div class="grid md-grid-cols-2 lg-grid-cols-4 gap-10" id="gallery-container"></div>
             </section>
         </main>
         <footer class="bg-primary text-gray">
@@ -174,7 +174,7 @@
                     <div>
                         <div class="mb-20 text-center text-lg border-bottom-white border-5 pb-20 text-white">Subscribe to our Newsletter</div>
                         <form action="#">
-                            <div class="form-group">
+                            <div>
                                 <input type="email" id="email" name="email" autocomplete="email" class="form-control mb-20 py-20 px-10" placeholder="Enter your email" required aria-label="Email">
                             </div>
                             <button class="btn btn-secondary uppercase text-xs text-bold py-20 lg-h-fit" type="submit">Subscribe</button>

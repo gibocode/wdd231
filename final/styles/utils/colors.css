@@ -43,4 +43,13 @@
     .lg-bg-secondary {
         background-color: var(--secondary-color);
     }
+    .lg-bg-white {
+        background-color: var(--white) !important;
+    }
+    .lg-bg-transparent {
+        background-color: transparent;
+    }
+    .lg-text-primary {
+        color: var(--primary-color) !important;
+    }
 }
