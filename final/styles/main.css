@@ -294,18 +294,18 @@ header > div > div > span {
     font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
-.logo-title {
+#logo-title {
     display: flex;
     margin-bottom: 20px;
 }
 
-.logo-title > span {
+#logo-title > span {
     font-weight: bold;
     color: var(--white);
     font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
-header img, .logo-title img {
+header img, #logo-title img {
     width: 50px;
     margin-right: 10px;
 }
@@ -373,7 +373,7 @@ h1 {
     text-align: center;
 }
 
-.hero h2 {
+#hero h2 {
     color: var(--white);
     text-align: center;
     font-weight: bold;
@@ -381,7 +381,7 @@ h1 {
     background-color: var(--primary-color);
 }
 
-.hero > div > div > div {
+#hero > div > div > div {
     background-color: var(--primary-color);
     text-align: center;
     color: var(--gray);
@@ -389,18 +389,18 @@ h1 {
     font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
-.hero {
+#hero {
     overflow: hidden;
 }
 
-.hero picture {
+#hero picture {
     aspect-ratio: 206 / 135;
     overflow: hidden;
     width: 100%;
     position: relative;
 }
 
-.hero img {
+#hero img {
     display: flex;
     justify-self: center;
     width: 100%;
@@ -408,82 +408,82 @@ h1 {
     object-fit: cover;
 }
 
-.hero > div {
+#hero > div {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
 }
 
-.hero > div > div {
+#hero > div > div {
     position: relative;
     padding: 40px 20px;
     background-color: var(--primary-color);
 }
 
-.donations {
+#donations {
     background-color: var(--secondary-color);
     display: grid;
 }
 
-.donations > div {
+#donations > div {
     padding: 30px 20px;
     transition: all 0.3s ease-in-out;
 }
 
-.donations > div:nth-child(even) {
+#donations > div:nth-child(even) {
     background-color: rgba(255,255,255,0.3);
 }
 
-.donations > div:hover {
+#donations > div:hover {
     background-color: rgba(0,0,0,0.3);
 }
 
-.donations p {
+#donations p {
     margin-bottom: 10px;
 }
 
-.donations > div > div {
+#donations > div > div {
     display: flex;
     width: fit-content;
     justify-self: center;
 }
 
-.donations > div > div > div > div {
+#donations > div > div > div > div {
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 20px;
     font-size: clamp(1.2rem, 3vw, 1.7rem);
 }
 
-.events {
+#events {
     padding: 40px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.events > div {
+#events > div {
     display: grid;
     margin: 0 auto;
     justify-content: center;
     gap: 20px;
 }
 
-.events > div > div {
+#events > div > div {
     max-width: 500px;
 }
 
-.events > div > div > div:first-child {
+#events > div > div > div:first-child {
     overflow: hidden;
     display: flex;
     margin-bottom: 10px;
 }
 
-.events > div > div > div > div {
+#events > div > div > div > div {
     text-transform: uppercase;
     margin-bottom: 10px;
 }
 
-.events picture {
+#events picture {
     display: flex;
     aspect-ratio: 3 / 2;
     overflow: hidden;
@@ -491,22 +491,22 @@ h1 {
     position: relative;
 }
 
-.events img {
+#events img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: all 0.5s ease-in-out;
 }
 
-.events img:hover {
+#events img:hover {
     transform: scale(1.1);
 }
 
-.events p {
+#events p {
     margin-bottom: 10px;
 }
 
-.events h2, .featured h2, .gallery h2, .newsletter-label  {
+#events h2, #featured h2, #gallery h2, .newsletter-label  {
     margin-bottom: 20px;
     text-align: center;
     border-bottom: 5px solid var(--secondary-color);
@@ -514,41 +514,41 @@ h1 {
     font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
-.featured {
+#featured {
     background-color: var(--white);
     width: 100%;
     padding: 40px;
 }
 
-.featured > div {
+#featured > div {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.gallery {
+#gallery {
     padding: 40px;
     width: 100%;
     background-color: var(--secondary-color);
 }
 
-.gallery h2 {
+#gallery h2 {
     border-bottom: 5px solid var(--primary-color);
 }
 
-.gallery-image-wrapper {
+#gallery-image-wrapper {
     aspect-ratio: 3 / 2;
     overflow: hidden;
     width: 100%;
     position: relative;
 }
 
-.gallery-image-wrapper > img{
+#gallery-image-wrapper > img{
     width: 100%;
     height: auto;
     transition: all 0.3s ease-in-out;
 }
 
-.gallery-image-wrapper > img:hover {
+#gallery-image-wrapper > img:hover {
     filter: brightness(0.7);
     transform: scale(1.05);
 }
@@ -563,7 +563,7 @@ h1 {
     gap: 20px;
 }
 
-.featured-article {
+#featured-article {
     display: grid;
     grid-template-areas:
         "image"
@@ -571,11 +571,11 @@ h1 {
     grid-template-rows: auto 1fr;
 }
 
-.featured-article .card-image {
+#featured-article .card-image {
     grid-area: image;
 }
 
-.featured-article .card-body {
+#featured-article .card-body {
     display: grid;
     grid-template-areas:
         "articleTitle"
@@ -649,22 +649,22 @@ footer > div > div {
     margin-right: 10px;
 }
 
-.sitemaps > div {
+#sitemaps > div {
     color: var(--white);
     margin-bottom: 20px;
     font-size: clamp(1.2rem, 3vw, 1.7rem);
 }
 
-.sitemaps ul {
+#sitemaps ul {
     color: var(--white);
     list-style: none;
 }
 
-.sitemaps li {
+#sitemaps li {
     margin-bottom: 10px;
 }
 
-.sitemaps a {
+#sitemaps a {
     text-decoration: none;
     color: var(--white);
 }

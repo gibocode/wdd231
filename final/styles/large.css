@@ -42,7 +42,7 @@
     header > div > div:last-child {
         margin-bottom: 0;
     }
-    .hero h2 {
+    #hero h2 {
         color: var(--primary-color);
         text-align: left;
         width: fit-content;
@@ -51,25 +51,25 @@
         padding: 10px 20px;
         margin-bottom: 10px;
     }
-    .hero > div > div > div {
+    #hero > div > div > div {
         width: fit-content;
     }
-    .hero > div > div {
+    #hero > div > div {
         top: -250px;
         position: absolute;
         background-color: transparent;
         left: 20px;
     }
-    .hero img {
+    #hero img {
         width: 110%;
     }
-    .donations > div {
+    #donations > div {
         padding: 60px 40px;
     }
-    .events {
+    #events {
         padding: 60px;
     }
-    .events > div {
+    #events > div {
         grid-template-columns: 1fr 1fr;
     }
     #featured-news {
@@ -85,10 +85,10 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .hero > div > div {
+    #hero > div > div {
         top: -300px;
     }
-    .donations {
+    #donations {
         grid-template-columns: repeat(3, 1fr);
     }
     #gallery-container {
