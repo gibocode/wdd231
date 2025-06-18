@@ -23,10 +23,6 @@
     font-weight: bold;
 }
 
-.text-lg {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-}
-
 .white-space-nowrap {
     white-space: nowrap;
 }
@@ -383,6 +379,31 @@ header > div:first-child {
     margin: 0 auto;
 }
 
+header > div:last-child {
+    background-color: var(--primary-color);
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+header > div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+header > div > div:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+header > div > div > span {
+    font-weight: bold;
+    white-space: nowrap;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
 .logo-title {
     display: flex;
     margin-bottom: 20px;
@@ -497,8 +518,16 @@ h1 {
     object-fit: cover;
 }
 
+.hero > div > div {
+    position: relative;
+    padding: 40px 20px;
+    background-color: var(--primary-color);
+    left: 20px;
+}
+
 .donations {
     background-color: var(--secondary-color);
+    display: grid;
 }
 
 .donations > div {
@@ -533,6 +562,8 @@ h1 {
 
 .events {
     padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .events > div {
@@ -541,6 +572,20 @@ h1 {
     justify-content: center;
     gap: 20px;
     flex-direction: column;
+}
+
+.events > div > div {
+    max-width: 500px;
+}
+
+.events > div > div > div:first-child {
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.events picture {
+    display: flex;
 }
 
 .events img {
@@ -562,6 +607,13 @@ h1 {
 
 .featured {
     background-color: var(--white);
+    width: 100%;
+    padding: 40px;
+}
+
+.featured > div {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .gallery {
