@@ -1,0 +1,8 @@
+@media screen and (min-width: 413px) {
+    .sm-flex-row {
+        flex-direction: row;
+    }
+    .donations > div {
+        padding: 50px 40px;
+    }
+}

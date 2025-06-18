@@ -19,12 +19,12 @@ class FeaturedArticle {
 
         card.className = "card featured-article";
         imageWrapper.className = "card-image-wrapper";
-        image.className = "w-full h-auto card-image";
+        image.className = "card-image";
         cardBody.className = "card-body";
-        title.className = "uppercase text-bold mb-20 article-title";
-        author.className = "text-italic mb-10 text-dark-gray article-author";
+        title.className = "article-title";
+        author.className = "article-author";
         content.className = "article-content";
-        button.className = "btn btn-secondary uppercase rounded-50 article-button max-w-200 mx-auto";
+        button.className = "btn btn-secondary article-button";
 
         image.src = data.urlToImage;
         image.alt = `${data.title} Image`;

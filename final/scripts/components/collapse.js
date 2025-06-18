@@ -26,12 +26,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // Expand all collapsible elements
     function slideDown(element, duration = 300) {
 
+        console.log(element);
+
         const display = window.getComputedStyle(element).display;
         const height = `${element.scrollHeight}px`;
 
+        console.log(height);
+
         element.style.removeProperty("display");
 
-        if (display === "none") element.style.display = "block";
+        if (display === "none") element.style.display = "flex";
 
         element.style.overflow = "hidden";
         element.style.height = "0";

@@ -16,6 +16,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
         <link href="styles/main.css" rel="stylesheet">
+        <link href="styles/medium.css" rel="stylesheet">
+        <link href="styles/large.css" rel="stylesheet">
         <script src="scripts/main.mjs" type="module"></script>
     </head>
     <body>
@@ -30,11 +32,11 @@
                 </div>
             </div>
             <div class="bg-primary border-bottom-secondary border-5">
-                <nav class="text-secondary p-10 flex align-items-center justify-between pr-10 max-w-1200 lg-mx-auto">
-                    <button id="menu-button" class="btn btn-primary p-5 mr-20" data-toggle="collapse" data-target="menu" aria-label="Toggle Menu">
-                        <span class="icon icon-menu icon-sm w-30 h-30 text-xl"></span>
+                <nav>
+                    <button id="menu-button" class="btn btn-primary" data-toggle="collapse" data-target="menu" aria-label="Toggle Menu">
+                        <span class="icon icon-menu"></span>
                     </button>
-                    <ul class="collapse menu" id="menu">
+                    <ul class="collapse" id="menu">
                         <li>
                            <a href="index.html" class="active">Home</a>
                         </li>
@@ -137,8 +139,8 @@
                 <div class="grid md-grid-cols-2 lg-grid-cols-4 gap-10" id="gallery-container"></div>
             </section>
         </main>
-        <footer class="bg-primary text-gray">
-            <div class="p-40">
+        <footer>
+            <div>
                 <div class="grid lg-grid-cols-3 gap-30 lg-p-40">
                     <div>
                         <div class="flex mb-20">
@@ -175,9 +177,9 @@
                         <div class="mb-20 text-center text-lg border-bottom-white border-5 pb-20 text-white">Subscribe to our Newsletter</div>
                         <form action="#">
                             <div>
-                                <input type="email" id="email" name="email" autocomplete="email" class="form-control mb-20 py-20 px-10" placeholder="Enter your email" required aria-label="Email">
+                                <input type="email" id="email" name="email" autocomplete="email" class="form-control" placeholder="Enter your email" required aria-label="Email">
                             </div>
-                            <button class="btn btn-secondary uppercase text-xs text-bold py-20 lg-h-fit" type="submit">Subscribe</button>
+                            <button class="btn btn-secondary subscribe-button" type="submit">Subscribe</button>
                         </form>
                     </div>
                 </div>
