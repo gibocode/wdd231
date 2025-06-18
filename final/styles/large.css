@@ -63,7 +63,7 @@
     .hero img {
         width: 110%;
     }
-    #donations > div {
+    .donations > div {
         padding: 60px 40px;
     }
     #events {
@@ -88,7 +88,7 @@
     .hero > div > div {
         top: -300px;
     }
-    #donations {
+    .donations {
         grid-template-columns: repeat(3, 1fr);
     }
     #gallery-container {

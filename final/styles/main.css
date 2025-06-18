@@ -420,35 +420,35 @@ h1 {
     background-color: var(--primary-color);
 }
 
-#donations {
+.donations {
     background-color: var(--secondary-color);
     display: grid;
 }
 
-#donations > div {
+.donations > div {
     padding: 30px 20px;
     transition: all 0.3s ease-in-out;
 }
 
-#donations > div:nth-child(even) {
+.donations > div:nth-child(even) {
     background-color: rgba(255,255,255,0.3);
 }
 
-#donations > div:hover {
+.donations > div:hover {
     background-color: rgba(0,0,0,0.3);
 }
 
-#donations p {
+.donations p {
     margin-bottom: 10px;
 }
 
-#donations > div > div {
+.donations > div > div {
     display: flex;
     width: fit-content;
     justify-self: center;
 }
 
-#donations > div > div > div > div {
+.donations > div > div > div > div {
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 20px;

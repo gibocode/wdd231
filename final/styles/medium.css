@@ -1,5 +1,5 @@
 @media screen and (min-width: 413px) {
-    #donations > div {
+    .donations > div {
         padding: 50px 40px;
     }
     #events > div {
