@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home | Global NGO Insights</title>
-        <meta name="description" content="Discover impactful NGOs around the world with Global NGO Insights. Explore missions, projects, and global development data — all in one place. Stay informed with the latest nonprofit news and learn how to support meaningful causes.">
+        <title>About | Global NGO Insights</title>
+        <meta name="description" content="Learn more about Global NGO Insights — our mission, values, and commitment to sharing reliable information about nonprofit organizations and their global impact.">
         <meta name="author" content="Gilbor Camporazo Jr.">
         <link rel="icon" href="images/favicon.ico">
         <link href="styles/main.css" rel="stylesheet">
@@ -28,13 +28,13 @@
                     </button>
                     <ul class="collapse menu" id="menu">
                         <li>
-                           <a href="index.html" class="active">Home</a>
+                           <a href="index.html">Home</a>
                         </li>
                         <li>
                             <a href="news.html">News</a>
                         </li>
                         <li>
-                            <a href="about.html">About</a>
+                            <a href="about.html" class="active">About</a>
                         </li>
                     </ul>
                     <div class="search">
@@ -44,98 +44,7 @@
             </div>
         </header>
         <main>
-            <section class="hero">
-                <picture class="hero-wrapper">
-                    <source srcset="images/hero_large.webp" type="image/webp" media="(min-width: 768px)">
-                    <img src="images/hero_small.webp" alt="Global NGO Insights Hero Image" class="w-full h-auto hero-image" width="412" height="270">
-                </picture>
-                <div class="max-w-1200 mx-auto relative">
-                    <div class="left-20 lg-top--150 xl-top--300 lg-absolute">
-                        <h2 class="uppercase text-center text-bold text-lg bg-white py-10 px-20 lg-mb-10">Global Impact, Local Change</h2>
-                        <div class="bg-primary text-center text-white lg-w-fit text-md p-5 px-10">Discover. Learn. Support.</div>
-                    </div>
-                </div>
-            </section>
-            <div class="donations bg-secondary grid lg-grid-cols-3">
-                <div>
-                    <div class="flex w-fit justify-self-center">
-                        <span class="icon icon-dollar text-xl mr-20"></span>
-                        <div>
-                            <div class="uppercase text-bold mb-20 text-md">Donation</div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <button class="btn btn-primary uppercase">Donate Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="flex w-fit justify-self-center">
-                        <span class="icon icon-people text-xl mr-20"></span>
-                        <div>
-                            <div class="uppercase text-bold mb-20 text-md">Volunteer</div>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                            <button class="btn btn-primary uppercase">Join Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="flex w-fit justify-self-center">
-                        <span class="icon icon-globe text-xl mr-20"></span>
-                        <div>
-                            <div class="uppercase text-bold mb-20 text-md">Fundraise</div>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                            <button class="btn btn-primary uppercase">Read More</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <section class="events max-w-1200 mx-auto">
-                <h2 class="mb-20 text-center text-lg border-bottom-secondary border-5 pb-20">Events</h2>
-                <div class="flex mx-auto justify-center gap-20 flex-column sm-flex-row">
-                    <div class="max-w-500">
-                        <div class="overflow-hidden flex mb-10">
-                            <picture class="flex">
-                                <source srcset="images/event1.webp" type="image/webp" media="(min-width: 768px)">
-                                <img src="images/event1_small.webp" alt="Event 1" class="w-full h-auto" width="332" height="221" loading="lazy">
-                            </picture>
-                        </div>
-                        <div>
-                            <div class="uppercase mb-10">Lorem Ipsum</div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis optio, veniam labore totam quaerat modi odit corporis, molestias, laboriosam nostrum maiores sit recusandae. Similique ducimus, repellat possimus reiciendis distinctio consectetur!</p>
-                        </div>
-                    </div>
-                    <div class="max-w-500">
-                        <div class="overflow-hidden flex mb-10">
-                            <picture class="flex">
-                                <source srcset="images/event2.webp" type="image/webp" media="(min-width: 768px)">
-                                <img src="images/event2_small.webp" alt="Event 2" class="w-full h-auto" width="332" height="221" loading="lazy">
-                            </picture>
-                        </div>
-                        <div>
-                            <div class="uppercase mb-10">Lorem Ipsum</div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis optio, veniam labore totam quaerat modi odit corporis, molestias, laboriosam nostrum maiores sit recusandae. Similique ducimus, repellat possimus reiciendis distinctio consectetur!</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="featured w-full p-40 bg-white">
-                <div class="max-w-1200 mx-auto">
-                    <h2 class="mb-20 text-center text-lg border-bottom-secondary border-5 pb-20">Featured News</h2>
-                    <div class="grid lg-grid-cols-3 gap-20" id="featured-news"></div>
-                </div>
-            </section>
-            <section class="gallery w-full bg-secondary">
-                <h2 class="mb-20 text-center text-lg border-bottom-primary border-5 pb-20">Gallery</h2>
-                <div class="grid md-grid-cols-2 lg-grid-cols-4 gap-10" id="gallery-container">
-                    <!-- <img src="https://placehold.co/600x500" alt="Gallery Image 1" class="w-full h-auto">
-                    <img src="https://placehold.co/600x500" alt="Gallery Image 1" class="w-full h-auto">
-                    <img src="https://placehold.co/600x500" alt="Gallery Image 1" class="w-full h-auto">
-                    <img src="https://placehold.co/600x500" alt="Gallery Image 1" class="w-full h-auto">
-                    <img src="https://placehold.co/600x500" alt="Gallery Image 1" class="w-full h-auto">
-                    <img src="https://placehold.co/600x500" alt="Gallery Image 1" class="w-full h-auto">
-                    <img src="https://placehold.co/600x500" alt="Gallery Image 1" class="w-full h-auto">
-                    <img src="https://placehold.co/600x500" alt="Gallery Image 1" class="w-full h-auto"> -->
-                </div>
-            </section>
+
         </main>
         <footer class="bg-primary text-gray">
             <div class="p-40">

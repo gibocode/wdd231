@@ -5,6 +5,30 @@
     font-size: 0.8rem;
     color: var(--white);
     white-space: nowrap;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    filter: brightness(0.9);
+}
+
+.btn:active {
+    filter: brightness(1);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.btn-primary:hover {
+    filter: brightness(1.2);
+}
+
+.btn-primary:active {
+    filter: brightness(1);
 }
 
 .btn-secondary {

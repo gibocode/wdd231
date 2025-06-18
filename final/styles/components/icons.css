@@ -1,6 +1,0 @@
-.icon-menu::after {
-    content: url("../../images/menu.svg");
-    color: var(--secondary-color);
-    width: auto;
-    height: auto;
-}

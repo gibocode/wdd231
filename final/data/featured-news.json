@@ -1,0 +1,45 @@
+{
+    "status": "ok",
+    "totalResults": 3,
+    "articles": [
+        {
+            "source": {
+                "id": "al-jazeera-english",
+                "name": "Al Jazeera English"
+            },
+            "author": "Al Jazeera",
+            "title": "Measure targeting pro-Palestine NGOs disappears from US tax bill",
+            "description": "Legislation would have allowed the executive branch to crack down on 'terrorism supporting' nonprofits.",
+            "url": "https://www.aljazeera.com/news/2025/5/19/measure-targeting-pro-palestine-ngos-disappears-from-us-tax-bill",
+            "urlToImage": "https://www.aljazeera.com/wp-content/uploads/2024/07/IMG_1314-1721859980.jpg?resize=1920%2C1440",
+            "publishedAt": "2025-05-19T17:28:10Z",
+            "content": "Washington, DC A measure known as the nonprofit killer has been removed from an enormous tax bill being advanced in the United States Congress, according to the bill posted online by the House of Rep… [+5374 chars]"
+        },
+        {
+            "source": {
+                "id": "al-jazeera-english",
+                "name": "Al Jazeera English"
+            },
+            "author": "Al Jazeera",
+            "title": "Gaza Humanitarian Foundation to launch aid deliveries despite losing chief",
+            "description": "UN and major humanitarian organisations have raised concerns about the Gaza Humanitarian Foundation",
+            "url": "https://www.aljazeera.com/news/2025/5/26/gaza-humanitarian-foundation-to-launch-aid-deliveries-despite-losing-chief",
+            "urlToImage": "https://www.aljazeera.com/wp-content/uploads/2025/05/image-1748130947.jpg?resize=1620%2C1080&quality=80",
+            "publishedAt": "2025-05-26T08:10:10Z",
+            "content": "An NGO backed by Israel and the United States has announced that it is set to start distributing aid in besieged Gaza, despite its chief walking out, citing concerns over its independence.\r\nThe Gaza … [+3708 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Hospitality Net"
+            },
+            "author": "The Travel Foundation",
+            "title": "The Travel Foundation strengthens its leadership with three new trustees",
+            "description": "Leading global sustainable tourism NGO, the Travel Foundation has welcomed three new trustees, bringing a wealth of new experience and expertise to its team.",
+            "url": "https://www.hospitalitynet.org/news/4127692.html",
+            "urlToImage": "https://www.hospitalitynet.org/HN-icon.jpg",
+            "publishedAt": "2025-06-13T14:15:49Z",
+            "content": "Leading global sustainable tourism NGO, the Travel Foundation has welcomed three new trustees, bringing a wealth of new experience and expertise to its team.\r\nThe Travel Foundations new trustees are:… [+2973 chars]"
+        }
+    ]
+}

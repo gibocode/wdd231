@@ -1,3 +1,7 @@
 .block {
-    display: block;
+    display: block !important;
+}
+
+.inline {
+    display: inline !important;
 }

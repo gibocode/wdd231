@@ -5,3 +5,31 @@
 .rounded-50 {
     border-radius: 50px;
 }
+
+.border {
+    border: 1px solid var(--primary-color);
+}
+
+.border-top-secondary {
+    border-top: 1px solid var(--secondary-color);
+}
+
+.border-bottom-primary {
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.border-bottom-secondary {
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.border-bottom-white {
+    border-bottom: 1px solid var(--white);
+}
+
+.border-5 {
+    border-width: 5px;
+}
+
+.overflow-hidden {
+    overflow: hidden !important;
+}

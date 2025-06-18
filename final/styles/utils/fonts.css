@@ -6,10 +6,42 @@
     font-weight: bold;
 }
 
+.text-italic {
+    font-style: italic !important;
+}
+
+.text-xs {
+    font-size: clamp(0.7rem, 3vw, 1.2rem) !important;
+}
+
+.text-sm {
+    font-size: clamp(1rem, 3vw, 1.5rem) !important;
+}
+
+.text-md {
+    font-size: clamp(1.2rem, 3vw, 1.7rem) !important;
+}
+
 .text-lg {
-    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-size: clamp(1.5rem, 3vw, 2rem) !important;
+}
+
+.text-xl {
+    font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-decoration-none {
+    text-decoration: none !important;
 }
 
 .white-space-nowrap {
     white-space: nowrap;
+}
+
+.list-style-none {
+    list-style: none !important;
 }
