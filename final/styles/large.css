@@ -1,16 +1,4 @@
 @media screen and (min-width: 768px) {
-    .lg-bg-transparent {
-        background-color: transparent;
-    }
-    .lg-mb-0 {
-        margin-bottom: 0px;
-    }
-    .lg-absolute {
-        position: absolute;
-    }
-    .lg-top--250 {
-        top: -250px;
-    }
     header > div:first-child {
         flex-direction: row;
         padding: 20px;
