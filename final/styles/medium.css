@@ -2,4 +2,7 @@
     .donations > div {
         padding: 50px 40px;
     }
+    .events > div {
+        flex-direction: row;
+    }
 }

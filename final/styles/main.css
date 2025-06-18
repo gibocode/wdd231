@@ -535,6 +535,14 @@ h1 {
     padding: 40px;
 }
 
+.events > div {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+}
+
 .events img {
     max-width: 520px;
     transition: all 0.5s ease-in-out;
