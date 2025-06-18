@@ -36,6 +36,9 @@
         font-size: clamp(3rem, 3vw, 5rem);
         text-align: left;
     }
+    header > div > div:first-child {
+        margin-top: 0;
+    }
     header > div > div:last-child {
         margin-bottom: 0;
     }
@@ -55,6 +58,7 @@
         top: -250px;
         position: absolute;
         background-color: transparent;
+        left: 20px;
     }
     .hero img {
         width: 110%;
@@ -64,6 +68,9 @@
     }
     .events {
         padding: 60px;
+    }
+    .events > div {
+        grid-template-columns: 1fr 1fr;
     }
     #featured-news {
         grid-template-columns: repeat(3, 1fr);
@@ -77,15 +84,12 @@
     }
 }
 
-@media screen and (min-width: 970px) {
-    .donations {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
 @media screen and (min-width: 1024px) {
     .hero > div > div {
         top: -300px;
+    }
+    .donations {
+        grid-template-columns: repeat(3, 1fr);
     }
     #gallery-container {
         grid-template-columns: repeat(4, 1fr);
