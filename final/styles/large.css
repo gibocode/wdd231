@@ -1,71 +1,9 @@
 @media screen and (min-width: 768px) {
-    .lg-bg-secondary {
-        background-color: var(--secondary-color);
-    }
-    .lg-bg-white {
-        background-color: var(--white);
-    }
     .lg-bg-transparent {
         background-color: transparent;
     }
-    .lg-text-primary {
-        color: var(--primary-color);
-    }
-    .lg-text-lg {
-        font-size: clamp(1.5rem, 3vw, 2rem);
-    }
-    .lg-text-3xl {
-        font-size: clamp(3rem, 3vw, 5rem);
-    }
-    .lg-text-left {
-        text-align: left;
-    }
-    .lg-pb-10 {
-        padding-bottom: 10px;
-    }
-    .lg-p-20 {
-        padding: 20px;
-    }
-    .lg-p-40 {
-        padding: 40px;
-    }
-    .lg-py-10 {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    .lg-px-20 {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    .lg-flex {
-        display: flex;
-    }
-    .lg-h-fit {
-        height: fit-content;
-    }
-    .lg-w-fit {
-        width: fit-content;
-    }
-    .lg-my-0 {
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
     .lg-mb-0 {
         margin-bottom: 0px;
-    }
-    .lg-mb-10 {
-        margin-bottom: 10px;
-    }
-    .lg-my-20 {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    .lg-mx-auto {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .md-grid-cols-2 {
-        grid-template-columns: repeat(2, 1fr);
     }
     .lg-absolute {
         position: absolute;
@@ -146,9 +84,6 @@
 @media screen and (min-width: 970px) {
     .lg-grid-cols-3 {
         grid-template-columns: repeat(3, 1fr);
-    }
-    .lg-grid-cols-4 {
-        grid-template-columns: repeat(4, 1fr);
     }
 }
 
