@@ -42,7 +42,7 @@
     header > div > div:last-child {
         margin-bottom: 0;
     }
-    .hero-text1 {
+    .hero h2 {
         color: var(--primary-color);
         text-align: left;
         width: fit-content;
@@ -51,7 +51,7 @@
         padding: 10px 20px;
         margin-bottom: 10px;
     }
-    .hero-text2 {
+    .hero > div > div > div {
         width: fit-content;
     }
     .hero > div > div {

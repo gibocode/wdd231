@@ -305,7 +305,7 @@ header > div > div > span {
     font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
-.logo {
+header img, .logo-title img {
     width: 50px;
     margin-right: 10px;
 }
@@ -373,7 +373,7 @@ h1 {
     text-align: center;
 }
 
-.hero-text1 {
+.hero h2 {
     color: var(--white);
     text-align: center;
     font-weight: bold;
@@ -381,7 +381,7 @@ h1 {
     background-color: var(--primary-color);
 }
 
-.hero-text2 {
+.hero > div > div > div {
     background-color: var(--primary-color);
     text-align: center;
     color: var(--gray);
@@ -393,14 +393,14 @@ h1 {
     overflow: hidden;
 }
 
-.hero-wrapper {
+.hero picture {
     aspect-ratio: 206 / 135;
     overflow: hidden;
     width: 100%;
     position: relative;
 }
 
-.hero-image {
+.hero img {
     display: flex;
     justify-self: center;
     width: 100%;
@@ -478,6 +478,11 @@ h1 {
     margin-bottom: 10px;
 }
 
+.events > div > div > div > div {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
 .events picture {
     display: flex;
     aspect-ratio: 3 / 2;
@@ -537,13 +542,13 @@ h1 {
     position: relative;
 }
 
-.gallery-image {
+.gallery-image-wrapper > img{
     width: 100%;
     height: auto;
     transition: all 0.3s ease-in-out;
 }
 
-.gallery-image:hover {
+.gallery-image-wrapper > img:hover {
     filter: brightness(0.7);
     transform: scale(1.05);
 }

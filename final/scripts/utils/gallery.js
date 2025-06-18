@@ -10,7 +10,6 @@ class Gallery {
         const image = document.createElement("img");
 
         imageWrapper.className = "gallery-image-wrapper";
-        image.className = "gallery-image";
 
         image.src = `./images/${this.file}`;
         image.alt = this.name;
