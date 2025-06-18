@@ -769,7 +769,7 @@ h1 {
 }
 
 .article-button {
-    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    text-transform: uppercase;
     border-radius: 50px;
     max-width: 200px;
     margin: 0 auto;
@@ -789,7 +789,5 @@ footer {
 }
 
 footer > div:first-child {
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 40px;
 }
