@@ -3,10 +3,10 @@
         flex-direction: row;
         padding: 20px;
     }
-    #menu-button {
+    .menu-button {
         display: none;
     }
-    #menu {
+    .menu {
         display: flex !important;
         flex-direction: row;
         position: relative;
@@ -14,17 +14,17 @@
         padding-bottom: 0;
         background-color: transparent;
     }
-    #menu a {
+    .menu a {
         background-color: var(--primary-color);
         color: var(--secondary-color);
         padding: 10px 15px;
     }
-    #menu a.active {
+    .menu a.active {
         background-color: var(--secondary-color);
         color: var(--primary-color);
         filter: brightness(1);
     }
-    #menu a:not(.active):hover {
+    .menu a:not(.active):hover {
         filter: brightness(1.2);
         color: var(--secondary-color);
     }

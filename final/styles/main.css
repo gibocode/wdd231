@@ -314,7 +314,7 @@ main {
     flex: 1;
 }
 
-#menu {
+.menu {
     background-color: var(--secondary-color);
     width: 100%;
     list-style: none;
@@ -325,12 +325,12 @@ main {
     z-index: 1000;
 }
 
-#menu li {
+.menu li {
     display: flex;
     margin: 0 5px;
 }
 
-#menu a {
+.menu a {
     text-decoration: none;
     text-transform: uppercase;
     color: var(--primary-color);
@@ -342,15 +342,15 @@ main {
     transition: all 0.2s ease-in-out;
 }
 
-#menu a:hover {
+.menu a:hover {
     filter: brightness(0.9);
 }
 
-#menu a.active {
+.menu a.active {
     filter: brightness(1.2);
 }
 
-#menu-button {
+.menu-button {
     padding: 5px;
     margin-right: 20px;
 }
@@ -643,7 +643,7 @@ footer > div > div {
     border-radius: 50px;
 }
 
-#social-media a {
+footer > div > div > div > div:nth-child(2) a {
     text-decoration: none;
     color: var(--white);
     margin-right: 10px;
