@@ -673,12 +673,6 @@ footer > div > div > div:nth-child(2) a {
     font-size: larger;
 }
 
-.modal-body {
-    padding: 40px;
-    display: flex;
-    gap: 20px;
-}
-
 .modal-footer {
     background-color: var(--gray);
     padding: 20px;

@@ -111,9 +111,16 @@ function showModal(button) {
     const description = button.parentNode.querySelector("p").cloneNode(true);
 
     modal.querySelector(".modal-header").textContent = header;
-    modal.querySelector(".modal-body").innerHTML = "";
-    modal.querySelector(".modal-body").appendChild(icon);
-    modal.querySelector(".modal-body").appendChild(description);
+
+    const modalBody =
+
+    modalBody.style.padding = "40px";
+    modalBody.style.display = "flex";
+    modalBody.style.gap = "20px";
+
+    modalBody.innerHTML = "";
+    modalBody.appendChild(icon);
+    modalBody.appendChild(description);
 
     modal.showModal();
 }
