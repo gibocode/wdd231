@@ -2,9 +2,10 @@ import News from "../services/news.mjs";
 
 class Article {
 
-    constructor(data, lazyLoad = true) {
+    constructor(data, lazyLoad = true, index = 0) {
         this.data = data;
         this.lazyLoad = lazyLoad;
+        this.index = index;
     }
 
     async createItem() {
@@ -31,12 +32,10 @@ class Article {
         content.className = "article-content";
         button.className = "btn btn-secondary article-button";
 
-        const imageFile = stringToHex(data.author + " " + data.publishedAt);
-
         imageLarge.type = "image/webp";
         imageLarge.media = "(min-width: 768px)";
-        imageLarge.srcset = `./images/cache/${imageFile}.webp`;
-        image.src = `./images/cache/${imageFile}_small.webp`;
+        imageLarge.srcset = `./images/cache/${this.index}.webp`;
+        image.src = `./images/cache/${this.index}_small.webp`;
         image.alt = `${data.title} Image`;
 
         if (this.lazyLoad) {
@@ -93,23 +92,9 @@ export async function getArticles() {
             } else {
                 lazyload = (index > 5);
             }
-            const object = new Article(article, lazyload);
+            const object = new Article(article, lazyload, index);
             const item = await object.createItem();
             container.appendChild(item);
         }
     });
-}
-
-function stringToHex(str) {
-    return Array.from(str)
-        .map(char => char.charCodeAt(0).toString(16).padStart(2, "0"))
-        .join("");
-}
-
-function hexToString(hex) {
-    let result = "";
-    for (let i = 0; i < hex.length; i += 2) {
-        result += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
-    }
-    return result;
 }
