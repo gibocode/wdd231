@@ -23,8 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const display = window.getComputedStyle(element).display;
         const height = `${element.scrollHeight}px`;
 
-        console.log(height);
-
         element.style.removeProperty("display");
 
         if (display === "none") element.style.display = "flex";

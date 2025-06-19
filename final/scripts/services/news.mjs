@@ -10,7 +10,7 @@ export default class News {
             const data = await response.json();
             return data.data;
         } catch (error) {
-            console.log(`Error: ${error}`);
+
         }
     }
 }
