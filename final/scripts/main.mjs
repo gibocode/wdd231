@@ -34,12 +34,14 @@ function loadView(view) {
         localStorage.setItem("display-view", displayView);
     }
     const relatedNews = document.querySelector("main > div:nth-child(2)");
-    if (relatedNews.classList.contains("grid")) {
-        relatedNews.classList.remove("grid");
-    } else {
-        relatedNews.classList.remove("list");
+    if (relatedNews) {
+        if (relatedNews.classList.contains("grid")) {
+            relatedNews.classList.remove("grid");
+        } else {
+            relatedNews.classList.remove("list");
+        }
+        relatedNews.classList.add(displayView);
     }
-    relatedNews.classList.add(displayView);
 }
 
 loadView(localStorage.getItem("display-view"));

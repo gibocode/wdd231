@@ -10,6 +10,7 @@ main > div:first-child::before {
     background-image: url("../images/bg_header_small.webp");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     position: absolute;
     inset: 0;
     z-index: -1;
@@ -70,6 +71,7 @@ h1 {
     text-shadow: none;
     color: var(--primary-color);
     font-weight: bold;
+    border-bottom: 5px solid var(--secondary-color);
 }
 
 .view-button {

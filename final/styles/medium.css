@@ -2,6 +2,16 @@
     .donations > div {
         padding: 50px 40px;
     }
+    .donations > div > div {
+        grid-template-areas:
+            "donationLogo donationContent";
+        text-align: left;
+        justify-items: start;
+        gap: 20px;
+    }
+    .donations .btn {
+        justify-self: start;
+    }
     #events > div {
         flex-direction: row;
     }

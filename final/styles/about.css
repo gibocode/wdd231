@@ -10,27 +10,11 @@ main > div:first-child::before {
     background-image: url("../images/bg_header_small.webp");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     position: absolute;
     inset: 0;
     z-index: -1;
     opacity: 0.2;
-}
-
-main > div > div {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-main > div > div:first-child > div {
-    padding: 20px 20px 0;
-    display: flex;
-    gap: 10px;
-    justify-content: end;
-}
-
-main > div:nth-child(2) {
-    background-color: var(--white);
-    min-height: 100vh;
 }
 
 h1 {
@@ -39,6 +23,103 @@ h1 {
     text-shadow: none;
     color: var(--primary-color);
     font-weight: bold;
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+h2 {
+    border-bottom: 5px solid var(--secondary-color);
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+main section {
+    background-color: var(--white);
+}
+
+section:first-of-type > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+section:first-of-type > div > div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+section:first-of-type picture {
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    position: relative;
+}
+
+section:first-of-type picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.donations {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section:nth-of-type(2) {
+    text-align: center;
+    padding: 60px 40px 100px;
+}
+
+section:nth-of-type(2) h2 {
+    margin-bottom: 20px;
+    margin: 0 auto 30px;
+}
+
+.volunteers {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.volunteers > div {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+.volunteers > div > div {
+    padding: 10px;
+}
+
+.volunteers picture {
+    aspect-ratio: 13 / 17;
+    overflow: hidden;
+    position: relative;
+}
+
+.volunteers img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.2s ease-in-out;
+}
+
+.volunteers img:hover {
+    filter: blur(2px) brightness(0.7);
+}
+
+@media screen and (min-width: 413px) {
+    .volunteers {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -47,5 +128,24 @@ h1 {
     }
     h1 {
         font-size: clamp(1.8rem, 3vw, 2.2rem) !important;
+    }
+    section:first-of-type > div {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        padding: 60px;
+    }
+    .volunteers {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    section:first-of-type > div {
+        padding: 40px;
+    }
+    .volunteers {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
     }
 }

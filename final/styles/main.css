@@ -71,7 +71,7 @@
     display: block;
     width: 50px;
     height: 50px;
-    margin: 5px 20px 5px 5px;
+    margin: 5px;
     font-size: clamp(2rem, 3vw, 3rem);
 }
 
@@ -84,7 +84,6 @@
     display: block;
     width: 60px;
     height: 60px;
-    margin-right: 20px;
     font-size: clamp(2rem, 3vw, 3rem);
 }
 
@@ -97,7 +96,6 @@
     display: block;
     width: 60px;
     height: 60px;
-    margin-right: 20px;
     font-size: clamp(2rem, 3vw, 3rem);
 }
 
@@ -384,6 +382,7 @@ h1 {
 }
 
 .donations > div {
+    width: 100%;
     padding: 30px 20px;
     transition: all 0.3s ease-in-out;
 }
@@ -397,9 +396,39 @@ h1 {
 }
 
 .donations > div > div {
-    display: flex;
+    display: grid;
+    grid-template-areas:
+        "donationLogo"
+        "donationContent";
+    grid-template-columns: auto 1fr;
+    height: 100%;
+    text-align: center;
+    justify-items: center;
+}
+
+.donations .icon {
+    grid-area: donationLogo;
+}
+
+.donations .btn {
+    grid-area: donationButton;
     width: fit-content;
     justify-self: center;
+}
+
+.donations p {
+    margin-bottom: 20px;
+    grid-area: donationDescription;
+}
+
+.donations > div > div > div {
+    display: grid;
+    grid-template-areas:
+        "donationLabel"
+        "donationDescription"
+        "donationButton";
+    grid-template-rows: auto 1fr auto;
+    grid-area: donationContent;
 }
 
 .donations > div > div > div > div {
@@ -407,6 +436,7 @@ h1 {
     font-weight: bold;
     margin-bottom: 20px;
     font-size: clamp(1.2rem, 3vw, 1.7rem);
+    grid-area: donationLabel;
 }
 
 #events {
