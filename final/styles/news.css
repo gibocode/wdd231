@@ -27,7 +27,6 @@ main > div:first-child::before {
 main > div:nth-child(2) {
     background-color: var(--white);
     min-height: 100vh;
-    /* height: 100vh; */
 }
 
 h1 {

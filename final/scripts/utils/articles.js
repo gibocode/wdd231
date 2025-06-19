@@ -28,14 +28,14 @@ class Article {
 
         let url = data.urlToImage;
 
-        try {
-            const response = await fetch(data.urlToImage, {
-                credentials: "omit",
-                mode: "cors",
-            });
-            const blob = await response.blob();
-            url = URL.createObjectURL(blob);
-        } catch (error) {}
+        // try {
+        //     const response = await fetch(data.urlToImage, {
+        //         credentials: "omit",
+        //         mode: "cors",
+        //     });
+        //     const blob = await response.blob();
+        //     url = URL.createObjectURL(blob);
+        // } catch (error) {}
 
         image.src = url;
 
