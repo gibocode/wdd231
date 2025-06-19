@@ -1,7 +1,7 @@
 export default class News {
 
     KEY = "349cf76a5412449eab5f8a0ef2d9c969";
-    ENDPOING = "https://newsapi.org/v2/everything";
+    ENDPOINT = "https://newsapi.org/v2/everything";
 
     async getFeaturedArticles() {
         const response = await fetch("./data/featured-news.json");

@@ -2,14 +2,16 @@ import News from "../services/news.mjs";
 
 class Article {
 
-    constructor(data) {
+    constructor(data, lazyLoad = true) {
         this.data = data;
+        this.lazyLoad = lazyLoad;
     }
 
     async createItem() {
         const data = this.data;
         const card = document.createElement("div");
-        const imageWrapper = document.createElement("div");
+        const imageWrapper = document.createElement("picture");
+        const imageLarge = document.createElement("source");
         const image = document.createElement("img");
         const cardBody = document.createElement("div");
         const title = document.createElement("div");
@@ -26,24 +28,20 @@ class Article {
         content.className = "article-content";
         button.className = "btn btn-secondary article-button";
 
-        let url = data.urlToImage;
+        const imageFile = stringToHex(data.author + " " + data.publishedAt);
 
-        // try {
-        //     const response = await fetch(data.urlToImage, {
-        //         credentials: "omit",
-        //         mode: "cors",
-        //     });
-        //     const blob = await response.blob();
-        //     url = URL.createObjectURL(blob);
-        // } catch (error) {}
-
-        image.src = url;
-
+        imageLarge.type = "image/webp";
+        imageLarge.media = "(min-width: 768px)";
+        imageLarge.srcset = `./images/cache/${imageFile}.webp`;
+        image.src = `./images/cache/${imageFile}_small.webp`;
         image.alt = `${data.title} Image`;
-        image.loading = "lazy";
-        image.referrerpolicy = "no-referrer";
-        image.width = 600;
-        image.height = 400;
+
+        if (this.lazyLoad) {
+            image.loading = "lazy";
+        }
+
+        image.width = 370;
+        image.height = 247;
         button.href = data.url;
         button.target = "_blank";
         button.title = data.title;
@@ -58,6 +56,7 @@ class Article {
         cardBody.appendChild(content);
         cardBody.appendChild(button);
 
+        imageWrapper.appendChild(imageLarge);
         imageWrapper.appendChild(image);
 
         card.appendChild(imageWrapper);
@@ -73,9 +72,23 @@ export async function getArticles() {
     const articles = items.slice(0, 15);
     const container = document.querySelector("#articles");
 
-    articles.forEach(async article => {
-        const object = new Article(article);
+    articles.forEach(async (article, index) => {
+        const object = new Article(article, (index > 5));
         const item = await object.createItem();
         container.appendChild(item);
     });
+}
+
+function stringToHex(str) {
+    return Array.from(str)
+        .map(char => char.charCodeAt(0).toString(16).padStart(2, "0"))
+        .join("");
+}
+
+function hexToString(hex) {
+    let result = "";
+    for (let i = 0; i < hex.length; i += 2) {
+        result += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+    }
+    return result;
 }

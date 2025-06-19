@@ -554,7 +554,7 @@ h1 {
     grid-template-rows: auto 1fr;
 }
 
-.featured-article .card-image {
+.featured-article .card-image-wrapper {
     grid-area: image;
 }
 
