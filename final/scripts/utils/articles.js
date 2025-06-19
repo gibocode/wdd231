@@ -16,15 +16,18 @@ class Article {
         const cardBody = document.createElement("div");
         const title = document.createElement("div");
         const author = document.createElement("div");
+        const publishedAt = document.createElement("div");
+        const source = document.createElement("div");
         const content = document.createElement("p");
         const button = document.createElement("a");
 
-        card.className = "card featured-article";
-        imageWrapper.className = "card-image-wrapper";
+        card.className = "card article";
         image.className = "card-image";
         cardBody.className = "card-body";
         title.className = "article-title";
         author.className = "article-author";
+        publishedAt.className = "article-published-at";
+        source.className = "article-source";
         content.className = "article-content";
         button.className = "btn btn-secondary article-button";
 
@@ -48,11 +51,15 @@ class Article {
 
         title.textContent = data.title;
         author.textContent = `By ${data.author || "Unknown"}`;
+        publishedAt.textContent = `Published at ${(new Date(data.publishedAt)).toLocaleString() || "No publish date"}`;
+        source.textContent = `Source: ${data.source.name || "Unknown source"}`;
         content.textContent = data.description || "No description available.";
         button.textContent = "Read Article";
 
         cardBody.appendChild(title);
         cardBody.appendChild(author);
+        cardBody.appendChild(publishedAt);
+        cardBody.appendChild(source);
         cardBody.appendChild(content);
         cardBody.appendChild(button);
 
@@ -70,12 +77,26 @@ export async function getArticles() {
     const news = new News();
     const items = await news.getArticles();
     const articles = items.slice(0, 15);
-    const container = document.querySelector("#articles");
+    const container = document.querySelector(".articles");
+    const object = new Article(articles[0], false);
+    const item = await object.createItem();
+
+    container.appendChild(item);
 
     articles.forEach(async (article, index) => {
-        const object = new Article(article, (index > 5));
-        const item = await object.createItem();
-        container.appendChild(item);
+        if (index > 0) {
+            let lazyload = false;
+            if (window.innerWidth < 768) {
+                lazyload = (index > 0);
+            } else if (window.innerWidth < 980) {
+                lazyload = (index > 3);
+            } else {
+                lazyload = (index > 5);
+            }
+            const object = new Article(article, lazyload);
+            const item = await object.createItem();
+            container.appendChild(item);
+        }
     });
 }
 

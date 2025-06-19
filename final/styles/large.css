@@ -75,6 +75,9 @@
     #featured-news {
         grid-template-columns: repeat(3, 1fr);
     }
+    #gallery {
+        padding: 40px 40px 100px;
+    }
     #gallery-container {
         grid-template-columns: repeat(2, 1fr);
     }

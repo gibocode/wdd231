@@ -14,4 +14,25 @@ document.addEventListener("DOMContentLoaded", async () => {
             getArticles();
         }
     }
+
+    const viewButtons = document.querySelectorAll(".view-button");
+
+    if (viewButtons) {
+        viewButtons.forEach(viewButton => {
+            viewButton.addEventListener("click", () => {
+                const view = viewButton.dataset.view;
+                loadView(view);
+            });
+        });
+    }
 });
+
+function loadView(view) {
+    const relatedNews = document.querySelector(".related-news");
+    if (relatedNews.classList.contains("grid")) {
+        relatedNews.classList.remove("grid");
+    } else {
+        relatedNews.classList.remove("list");
+    }
+    relatedNews.classList.add(view);
+}

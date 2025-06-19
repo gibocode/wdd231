@@ -11,8 +11,9 @@
         <meta property="og:image" content="https://gibocode.github.io/wdd231/final/images/logo_large.webp">
         <meta property="og:url" content="https://gibocode.github.io/wdd231/final/news.html">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-        <link rel="preload" as="image" href="images/bg_header.webp" fetchpriority="high">
-        <link rel="preload" as="image" href="images/cache/416e647920477265656e6265726720323032352d30352d32325431393a35363a34345a_small.webp" fetchpriority="high">
+        <link rel="preload" as="image" href="images/bg_header.webp" fetchpriority="high" type="image/webp">
+        <link rel="preload" as="image" href="images/bg_header_small.webp" fetchpriority="high" type="image/webp">
+        <link rel="preload" as="image" type="image/webp" href="images/cache/416e647920477265656e6265726720323032352d30352d32325431393a35363a34345a_small.webp" fetchpriority="high">
         <link rel="preload" as="fetch" href="https://newsapi.org/v2/everything?q=ngo&language=en&apiKey=349cf76a5412449eab5f8a0ef2d9c969" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +23,6 @@
         <link href="styles/medium.css" rel="stylesheet">
         <link href="styles/large.css" rel="stylesheet">
         <script src="scripts/main.mjs" type="module"></script>
-        <!-- <script src="scripts/news.js"></script> -->
     </head>
     <body>
         <header>
@@ -61,8 +61,22 @@
             <div>
                 <h1>Related News</h1>
             </div>
-            <div>
-                <div id="articles"></div>
+            <div class="related-news grid">
+                <div>
+                    <div>
+                        <div class="view-button" data-view="grid">
+                            <svg fill="currentColor" height="38" viewBox="0 0 24 24" width="38" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 11h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1zm10 0h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1zM4 21h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1zm10 0h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1z"/>
+                            </svg>
+                        </div>
+                        <div class="view-button" data-view="list">
+                            <svg fill="currentColor" height="40" viewBox="0 0 32 32" width="40" xmlns="http://www.w3.org/2000/svg">
+                                <path d=" M3 8 A3 3 0 0 0 9 8 A3 3 0 0 0 3 8 M12 6 L28 6 L28 10 L12 10z M3 16 A3 3 0 0 0 9 16 A3 3 0 0 0 3 16 M12 14 L28 14 L28 18 L12 18z M3 24 A3 3 0 0 0 9 24 A3 3 0 0 0 3 24 M12 22 L28 22 L28 26 L12 26z "/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="articles"></div>
             </div>
         </main>
         <footer>

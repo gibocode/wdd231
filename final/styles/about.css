@@ -28,8 +28,6 @@ main > div > div:first-child > div {
     justify-content: end;
 }
 
-
-
 main > div:nth-child(2) {
     background-color: var(--white);
     min-height: 100vh;
@@ -43,42 +41,11 @@ h1 {
     font-weight: bold;
 }
 
-.view-button {
-    padding: 2px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    background-color: var(--white);
-}
-
-.view-button:hover {
-    filter: brightness(0.8);
-}
-
-.grid .view-button:first-child, .list .view-button:last-child {
-    background-color: var(--gray);
-}
-
 @media screen and (min-width: 768px) {
     main > div:first-child::before {
         background-image: url("../images/bg_header.webp");
     }
     h1 {
         font-size: clamp(1.8rem, 3vw, 2.2rem) !important;
-    }
-    .grid .articles {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    }
-    .list .articles {
-        grid-template-columns: 1fr;
-    }
-    .list .article {
-        grid-template-areas:
-            "image cardBody";
-        grid-template-rows: 1fr;
-        grid-template-columns: auto 1fr;
-    }
-    .list .articles picture {
-        max-width: 370px;
     }
 }
