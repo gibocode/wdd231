@@ -13,8 +13,7 @@ export default class News {
     }
 
     async getArticles() {
-        // const response = await fetch(`${this.ENDPOINT}?q=ngo&language=en&apiKey=${this.KEY}`);
-        const response = await fetch("./data/news.json");
+        const response = await fetch(`${this.ENDPOINT}?q=ngo&language=en&apiKey=${this.KEY}`);
         if (!response.ok) {
             throw new Error("Failed to fetch news");
         }
