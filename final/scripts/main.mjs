@@ -1,4 +1,4 @@
-import "./components/collapse.js";
+import "./components/menu.js";
 import { getArticles } from "./utils/articles.js";
 import { getFeaturedNews } from "./utils/featured-news.js";
 import { getGalleryImages } from "./utils/gallery.js";
@@ -28,11 +28,18 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 function loadView(view) {
-    const relatedNews = document.querySelector(".related-news");
+    let displayView = localStorage.getItem("display-view");
+    if (!displayView || displayView != view) {
+        displayView = view || "grid";
+        localStorage.setItem("display-view", displayView);
+    }
+    const relatedNews = document.querySelector("main > div:nth-child(2)");
     if (relatedNews.classList.contains("grid")) {
         relatedNews.classList.remove("grid");
     } else {
         relatedNews.classList.remove("list");
     }
-    relatedNews.classList.add(view);
+    relatedNews.classList.add(displayView);
 }
+
+loadView(localStorage.getItem("display-view"));

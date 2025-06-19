@@ -1,32 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const elements = document.querySelectorAll(".collapse");
-    const buttons = document.querySelectorAll("[data-toggle=\"collapse\"]");
+    const menu = document.querySelector("#menu");
+    const button = document.querySelector("#menu-button");
 
-    elements.forEach(element => {
-        const parent = element.parentNode;
-        parent.style.position = "relative";
-        element.style.top = `${parent.parentNode.offsetHeight}px`;
-        element.style.display = "none";
-    });
+    const parent = menu.parentNode;
+    parent.style.position = "relative";
+    menu.style.top = `${parent.parentNode.offsetHeight}px`;
+    menu.style.display = "none";
 
-    buttons.forEach(button => {
-        button.addEventListener("click", () => {
-            const target = button.dataset.target;
-            const element = document.querySelector(`#${target}`);
-            element.classList.toggle("open");
-            if (element.classList.contains("open")) {
-                slideDown(element);
-            } else {
-                slideUp(element);
-            }
-        });
+    button.addEventListener("click", () => {
+        menu.classList.toggle("open");
+        if (menu.classList.contains("open")) {
+            slideDown(menu);
+        } else {
+            slideUp(menu);
+        }
     });
 
     // Expand all collapsible elements
     function slideDown(element, duration = 300) {
-
-        console.log(element);
 
         const display = window.getComputedStyle(element).display;
         const height = `${element.scrollHeight}px`;
