@@ -112,7 +112,7 @@ function showModal(button) {
 
     modal.querySelector(".modal-header").textContent = header;
 
-    const modalBody = modal.querySelector(".modal-body");
+    const modalBody = modal.querySelector(".modal > div:nth-child(2)");
 
     modalBody.style.padding = "40px";
     modalBody.style.display = "flex";
