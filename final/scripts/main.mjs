@@ -3,14 +3,16 @@ import { getArticles } from "./utils/articles.js";
 import { getGalleryImages } from "./utils/gallery.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
-    const menu = document.querySelector("#menu");
-    if (menu) {
-        const currentPage = menu.querySelector("a.active").textContent;
-        if (currentPage == "Home") {
+    const path = window.location.pathname;
+    if (path) {
+        if (path.includes("index.html")) {
             getArticles(3, true);
             getGalleryImages();
-        } else if (currentPage == "News") {
+        } else if (path.includes("news.html")) {
             getArticles(15);
+            loadView(localStorage.getItem("display-view"));
+        } else if (path.includes("newsletter.html")) {
+            checkSubscription();
         }
     }
 
@@ -24,6 +26,20 @@ document.addEventListener("DOMContentLoaded", async () => {
             });
         });
     }
+
+    const donationsButtons = document.querySelectorAll(".donations button");
+
+    donationsButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            showModal(button);
+        });
+    });
+
+    const closeModalButton = document.querySelector(".close-modal-button");
+
+    closeModalButton.addEventListener("click", () => {
+        closeModal();
+    });
 });
 
 function loadView(view) {
@@ -43,4 +59,62 @@ function loadView(view) {
     }
 }
 
-loadView(localStorage.getItem("display-view"));
+function checkSubscription() {
+    const params = new URLSearchParams(window.location.search);
+    const email = params.get("email");
+    if (email) {
+        const newsletterMessage = document.querySelector("#newsletter-message");
+        if (newsletterMessage) {
+            const message = attemptSubscription(email);
+            newsletterMessage.innerHTML = message;
+        }
+    }
+}
+
+function attemptSubscription(email) {
+    const newsletterData = localStorage.getItem("newsletter-data") || [];
+    let emails = [];
+    let message = "";
+    if (!newsletterData || newsletterData.length == 0) {
+        message = subscribe(emails, email);
+    } else {
+        emails = JSON.parse(newsletterData);
+        if (emails.includes(email)) {
+            message = "You are already subcribed.";
+        } else {
+            message = subscribe(emails, email);
+        }
+    }
+    return message;
+}
+
+function subscribe(emails, email) {
+    emails.push(email);
+    localStorage.setItem("newsletter-data", JSON.stringify(emails));
+    let message = `<svg fill="currentColor" width="50" height="50" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+        <g><polygon points="434.8,49 174.2,309.7 76.8,212.3 0,289.2 174.1,463.3 196.6,440.9 196.6,440.9 511.7,125.8 434.8,49"/></g>
+        </svg> <strong>Success!</strong> You are now subscribed to our newsletter!`;
+    return message;
+}
+
+function showModal(button) {
+    const modal = document.querySelector(".modal");
+    const header = button.parentNode.querySelector("div").textContent;
+    const icon = button.parentNode.parentNode.querySelector("span").cloneNode(true);
+    const description = button.parentNode.querySelector("p").cloneNode(true);
+
+    console.log(icon);
+
+    modal.querySelector(".modal-header").textContent = header;
+    modal.querySelector(".modal-body").innerHTML = "";
+    modal.querySelector(".modal-body").appendChild(icon);
+    modal.querySelector(".modal-body").appendChild(description);
+    // modal.querySelector(".modal-body").innerHTML = `${icon} ${description}`;
+    // modal.querySelector(".modal-body").textContent += description;
+    modal.showModal();
+}
+
+function closeModal() {
+    const modal = document.querySelector(".modal");
+    modal.close();
+}

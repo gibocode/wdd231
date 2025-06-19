@@ -1,0 +1,15 @@
+.newsletter {
+    background-color: var(--white);
+    height: 100%;
+}
+
+.newsletter > div {
+    padding: 60px;
+}
+
+#newsletter-message {
+    font-size: clamp(2rem, 4vw, 3rem);
+    text-align: center;
+    color: #2f9036;
+}
+

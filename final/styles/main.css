@@ -662,3 +662,37 @@ footer > div > div > div:nth-child(2) a {
     text-decoration: none;
     color: var(--white);
 }
+
+.modal {
+    flex-direction: column;
+    justify-self: center;
+    top: 200px;
+    min-width: 320px;
+    width: 500px;
+}
+
+.modal-header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: larger;
+}
+
+.modal-body {
+    padding: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.modal-footer {
+    background-color: var(--gray);
+    padding: 20px;
+    text-align: center;
+}
+
+.modal::backdrop {
+    background-color: rgba(0,0,0,0.5);
+}

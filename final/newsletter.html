@@ -3,20 +3,24 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home | Global NGO Insights</title>
-        <meta name="description" content="Discover impactful NGOs around the world with Global NGO Insights. Explore missions, projects, and global development data — all in one place. Stay informed with the latest nonprofit news and learn how to support meaningful causes.">
+        <title>Newsletter | Global NGO Insights</title>
+        <meta name="description" content="You’ve successfully subscribed to the Global NGO Insights newsletter. Get the latest news, impact stories, and updates from NGOs worldwide—right in your inbox.">
         <meta name="author" content="Gilbor Camporazo Jr.">
-        <meta property="og:title" content="Home | Global NGO Insights">
-        <meta property="og:description" content="Discover impactful NGOs around the world with Global NGO Insights. Explore missions, projects, and global development data — all in one place. Stay informed with the latest nonprofit news and learn how to support meaningful causes.">
+        <meta property="og:title" content="About | Global NGO Insights">
+        <meta property="og:description" content="You’ve successfully subscribed to the Global NGO Insights newsletter. Get the latest news, impact stories, and updates from NGOs worldwide—right in your inbox.">
         <meta property="og:image" content="https://gibocode.github.io/wdd231/final/images/logo_large.webp">
-        <meta property="og:url" content="https://gibocode.github.io/wdd231/final/index.html">
+        <meta property="og:url" content="https://gibocode.github.io/wdd231/final/about.html">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="preload" as="image" href="images/bg_header.webp" fetchpriority="high" type="image/webp">
+        <link rel="preload" as="image" href="images/bg_header_small.webp" fetchpriority="high" type="image/webp">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
         <link href="styles/main.css" rel="stylesheet">
+        <link href="styles/about.css" rel="stylesheet">
         <link href="styles/medium.css" rel="stylesheet">
         <link href="styles/large.css" rel="stylesheet">
+        <link href="styles/newsletter.css" rel="stylesheet">
         <script src="scripts/main.mjs" type="module"></script>
     </head>
     <body>
@@ -32,10 +36,10 @@
             </div>
             <div>
                 <nav>
-                    <button id="menu-button" class="btn btn-primary" aria-label="Toggle Menu">
+                    <button id="menu-button" class="btn btn-primary" data-toggle="collapse" data-target="menu" aria-label="Toggle Menu">
                         <span class="icon icon-menu"></span>
                     </button>
-                    <ul id="menu">
+                    <ul class="collapse" id="menu">
                         <li>
                            <a href="index.html" class="active">Home</a>
                         </li>
@@ -53,93 +57,14 @@
             </div>
         </header>
         <main>
-            <div class="hero">
-                <picture>
-                    <source srcset="images/hero_large.webp" type="image/webp" media="(min-width: 768px)">
-                    <img src="images/hero_small.webp" alt="Global NGO Insights Hero Image" width="412" height="270">
-                </picture>
+            <div>
+                <h1>Newsletter Subscription</h1>
+            </div>
+            <div class="newsletter">
                 <div>
-                    <div>
-                        <h1>Global NGO Insights</h1>
-                        <h2>Global Impact, Local Change</h2>
-                        <div>Discover. Learn. Support.</div>
-                    </div>
+                    <div id="newsletter-message"></div>
                 </div>
             </div>
-            <div class="donations">
-                <div>
-                    <div>
-                        <span class="icon icon-dollar"></span>
-                        <div>
-                            <div>Donation</div>
-                            <p>Help us make a difference with your contribution. Every donation supports real change.</p>
-                            <button class="btn btn-primary">Donate Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <span class="icon icon-people"></span>
-                        <div>
-                            <div>Volunteer</div>
-                            <p>Share your time and skills to uplift communities and support meaningful causes.</p>
-                            <button class="btn btn-primary">Join Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <span class="icon icon-globe"></span>
-                        <div>
-                            <div>Fundraise</div>
-                            <p>Start a campaign, rally support, and fund the work that matters most.</p>
-                            <button class="btn btn-primary">Create a Fundraiser</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <section id="events">
-                <h2>Events</h2>
-                <div>
-                    <div>
-                        <div>
-                            <picture>
-                                <source srcset="images/event1.webp" type="image/webp" media="(min-width: 768px)">
-                                <img src="images/event1_small.webp" alt="Event 1" width="332" height="221" loading="lazy">
-                            </picture>
-                        </div>
-                        <div>
-                            <div>Clean & Green: Community Cleanup Drive</div>
-                            <p>Join passionate volunteers as they come together to make a difference—one piece of trash at a time. The Clean & Green: Community Cleanup Drive is a hands-on initiative that brings neighbors, students, and civic groups together to restore the beauty of our parks, streets, and shared public spaces.</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <picture>
-                                <source srcset="images/event2.webp" type="image/webp" media="(min-width: 768px)">
-                                <img src="images/event2_small.webp" alt="Event 2" width="332" height="221" loading="lazy">
-                            </picture>
-                        </div>
-                        <div>
-                            <div>World NGO Day: Celebrating Hope and Humanity</div>
-                            <p>World NGO Day is a global celebration of the incredible impact that nonprofits and grassroots organizations have on communities around the world. In this joyful event, children come together to honor the spirit of giving, compassion, and unity that NGOs embody.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="featured">
-                <div>
-                    <h2>Featured News</h2>
-                    <div id="featured-news"></div>
-                    <div>
-                        <a href="news.html" class="btn btn-primary">See More News</a>
-                    </div>
-                </div>
-            </section>
-            <section id="gallery">
-                <h2>Gallery</h2>
-                <div id="gallery-container"></div>
-            </section>
         </main>
         <footer>
             <div>
@@ -191,12 +116,5 @@
                 <span>Gilbor Camporazo Jr.</span>
             </div>
         </footer>
-        <dialog class="modal">
-            <div class="modal-header">Donation</div>
-            <div class="modal-body">Help us make a difference with your contribution. Every donation supports real change.</div>
-            <div class="modal-footer">
-                <button class="btn btn-primary close-modal-button">Close</button>
-            </div>
-        </dialog>
     </body>
 </html>
