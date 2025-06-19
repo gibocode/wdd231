@@ -1,6 +1,5 @@
 import "./components/menu.js";
 import { getArticles } from "./utils/articles.js";
-import { getFeaturedNews } from "./utils/featured-news.js";
 import { getGalleryImages } from "./utils/gallery.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -8,10 +7,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (menu) {
         const currentPage = menu.querySelector("a.active").textContent;
         if (currentPage == "Home") {
-            getFeaturedNews();
+            getArticles(3, true);
             getGalleryImages();
         } else if (currentPage == "News") {
-            getArticles();
+            getArticles(15);
         }
     }
 

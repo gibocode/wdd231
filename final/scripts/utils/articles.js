@@ -2,40 +2,40 @@ import News from "../services/news.mjs";
 
 class Article {
 
-    constructor(data, lazyLoad = true, index = 0) {
+    constructor(data, lazyLoad = true, index = 0, featured) {
         this.data = data;
         this.lazyLoad = lazyLoad;
         this.index = index;
+        this.featured = featured;
     }
 
     async createItem() {
+
         const data = this.data;
         const card = document.createElement("div");
-        const imageWrapper = document.createElement("picture");
-        const imageLarge = document.createElement("source");
+        const imageWrapper = document.createElement((this.featured) ? "div" : "picture");
         const image = document.createElement("img");
         const cardBody = document.createElement("div");
         const title = document.createElement("div");
-        const author = document.createElement("div");
         const publishedAt = document.createElement("div");
         const source = document.createElement("div");
         const content = document.createElement("p");
         const button = document.createElement("a");
 
-        card.className = "card article";
+        if (this.featured) {
+            imageWrapper.className = "card-image-wrapper";
+        }
+
+        card.className = `card ${(this.featured) ? "featured-article" : "article"}`;
         image.className = "card-image";
         cardBody.className = "card-body";
         title.className = "article-title";
-        author.className = "article-author";
         publishedAt.className = "article-published-at";
         source.className = "article-source";
         content.className = "article-content";
         button.className = "btn btn-secondary article-button";
 
-        imageLarge.type = "image/webp";
-        imageLarge.media = "(min-width: 768px)";
-        imageLarge.srcset = `./images/cache/${this.index}.webp`;
-        image.src = `./images/cache/${this.index}_small.webp`;
+        image.src = `./images/cache/${this.index}.webp`;
         image.alt = `${data.title} Image`;
 
         if (this.lazyLoad) {
@@ -49,20 +49,22 @@ class Article {
         button.title = data.title;
 
         title.textContent = data.title;
-        author.textContent = `By ${data.author || "Unknown"}`;
-        publishedAt.textContent = `Published at ${(new Date(data.publishedAt)).toLocaleString() || "No publish date"}`;
+        publishedAt.textContent = `Published at ${(new Date(data.published_at)).toLocaleString() || "No publish date"}`;
         source.textContent = `Source: ${data.source.name || "Unknown source"}`;
-        content.textContent = data.description || "No description available.";
+        source.textContent = `Source: ${data.source || "Unknown source"}`;
+        content.textContent = ((this.featured) ? data.snippet : data.description) || "No description available.";
         button.textContent = "Read Article";
 
         cardBody.appendChild(title);
-        cardBody.appendChild(author);
-        cardBody.appendChild(publishedAt);
-        cardBody.appendChild(source);
+
+        if (!this.featured) {
+            cardBody.appendChild(publishedAt);
+            cardBody.appendChild(source);
+        }
+
         cardBody.appendChild(content);
         cardBody.appendChild(button);
 
-        imageWrapper.appendChild(imageLarge);
         imageWrapper.appendChild(image);
 
         card.appendChild(imageWrapper);
@@ -72,29 +74,36 @@ class Article {
     }
 }
 
-export async function getArticles() {
+export async function getArticles(itemCount, featured = false) {
+
+    const selector = (featured) ? "#featured-news" : ".articles";
+    const container = document.querySelector(selector);
     const news = new News();
-    const items = await news.getArticles();
-    const articles = items.slice(0, 15);
-    const container = document.querySelector(".articles");
-    const object = new Article(articles[0], false);
-    const item = await object.createItem();
+    const articles = await news.getArticles();
 
-    container.appendChild(item);
+    let startIndex = 0;
 
-    articles.forEach(async (article, index) => {
-        if (index > 0) {
-            let lazyload = false;
-            if (window.innerWidth < 768) {
-                lazyload = (index > 0);
-            } else if (window.innerWidth < 980) {
-                lazyload = (index > 3);
-            } else {
-                lazyload = (index > 5);
-            }
-            const object = new Article(article, lazyload, index);
-            const item = await object.createItem();
-            container.appendChild(item);
+    if (!featured) {
+        renderArticle(container, articles[0], false);
+        startIndex = 1;
+    }
+
+    articles.slice(startIndex, itemCount).forEach(async (article, index) => {
+        const itemIndex = index + startIndex;
+        let lazyload = false;
+        if (window.innerWidth < 768) {
+            lazyload = (itemIndex > 0);
+        } else if (window.innerWidth < 980) {
+            lazyload = (itemIndex > 3);
+        } else {
+            lazyload = (itemIndex > 5);
         }
+        renderArticle(container, article, lazyload, itemIndex, featured);
     });
+}
+
+async function renderArticle(container, article, lazyload, index = 0, featured = false) {
+    const object = new Article(article, lazyload, index, featured);
+    const item = await object.createItem();
+    container.appendChild(item);
 }

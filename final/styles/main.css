@@ -569,13 +569,12 @@ h1 {
     display: grid;
     grid-template-areas:
         "articleTitle"
-        "articleAuthor"
-        "articlePublishedAt"
         "articleContent"
         "articleSource"
+        "articlePublishedAt"
         "articleButton";
     grid-area: cardBody;
-    grid-template-rows: auto auto auto 1fr auto auto;
+    grid-template-rows: auto 1fr auto auto auto;
     height: 100%;
 }
 
@@ -586,25 +585,18 @@ h1 {
     grid-area: articleTitle;
 }
 
-.article-author {
-    font-style: italic;
-    color: var(--dark-gray);
-    grid-area: articleAuthor;
-}
-
 .article-published-at {
     color: var(--dark-gray);
     grid-area: articlePublishedAt;
     font-size: 0.8rem;
+    margin-bottom: 20px;
 }
 
 .article-content {
-    margin-top: 10px;
     grid-area: articleContent;
 }
 
 .article-source {
-    margin-bottom: 20px;
     color: var(--dark-gray);
     grid-area: articleSource;
     font-size: 0.8rem;

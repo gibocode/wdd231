@@ -1,45 +1,52 @@
 {
-    "status": "ok",
-    "totalResults": 3,
-    "articles": [
+    "data": [
         {
-            "source": {
-                "id": "al-jazeera-english",
-                "name": "Al Jazeera English"
-            },
-            "author": "Al Jazeera",
-            "title": "Measure targeting pro-Palestine NGOs disappears from US tax bill",
-            "description": "Legislation would have allowed the executive branch to crack down on 'terrorism supporting' nonprofits.",
-            "url": "https://www.aljazeera.com/news/2025/5/19/measure-targeting-pro-palestine-ngos-disappears-from-us-tax-bill",
-            "urlToImage": "https://www.aljazeera.com/wp-content/uploads/2024/07/IMG_1314-1721859980.jpg?resize=1920%2C1440",
-            "publishedAt": "2025-05-19T17:28:10Z",
-            "content": "Washington, DC A measure known as the nonprofit killer has been removed from an enormous tax bill being advanced in the United States Congress, according to the bill posted online by the House of Rep… [+5374 chars]"
+            "uuid": "d56a4b40-adab-4cd8-873e-c2fe6dd1f487",
+            "title": "Significance and ways to celebrate World NGO Day 2022",
+            "description": "Significance and ways to celebrate World NGO Day 2022",
+            "keywords": "",
+            "snippet": "World NGO Day is an international day dedicated to recognize, celebrate and honour all non-governmental and nonprofit organizations, and the people behind them ...",
+            "url": "https://www.freepressjournal.in/world/significance-and-ways-to-celebrate-world-ngo-day-2022",
+            "image_url": "https://images.assettype.com/freepressjournal/2022-02/997b66e1-d3e6-483b-8cbb-c39e6530e001/images__1_.png?rect=0%2C0%2C3900%2C2048&w=1200&auto=format%2Ccompress&ogImage=true",
+            "language": "en",
+            "published_at": "2022-02-26T07:20:09.000000Z",
+            "source": "freepressjournal.in",
+            "categories": [
+              "general"
+            ],
+            "relevance_score": 25.803673
         },
         {
-            "source": {
-                "id": "al-jazeera-english",
-                "name": "Al Jazeera English"
-            },
-            "author": "Al Jazeera",
-            "title": "Gaza Humanitarian Foundation to launch aid deliveries despite losing chief",
-            "description": "UN and major humanitarian organisations have raised concerns about the Gaza Humanitarian Foundation",
-            "url": "https://www.aljazeera.com/news/2025/5/26/gaza-humanitarian-foundation-to-launch-aid-deliveries-despite-losing-chief",
-            "urlToImage": "https://www.aljazeera.com/wp-content/uploads/2025/05/image-1748130947.jpg?resize=1620%2C1080&quality=80",
-            "publishedAt": "2025-05-26T08:10:10Z",
-            "content": "An NGO backed by Israel and the United States has announced that it is set to start distributing aid in besieged Gaza, despite its chief walking out, citing concerns over its independence.\r\nThe Gaza … [+3708 chars]"
+            "uuid": "7c293a1e-af1e-4b74-a255-a3f5866b3588",
+            "title": "Defunding the NGO Terror-Linked Propaganda Network",
+            "description": "For twenty years, the powerful NGOs (non-governmental organizations) that lead the propaganda campaigns demonizing Israel under the facade of civil society were...",
+            "keywords": "",
+            "snippet": "For twenty years, the powerful NGOs (non-governmental organizations) that lead the propaganda campaigns demonizing Israel under the facade of civil society were...",
+            "url": "https://jewishjournal.com/my-turn/344634/defunding-the-ngo-terror-linked-propaganda-network/",
+            "image_url": "https://jewishjournal.com/wp-content/uploads/2022/02/steinberg-NGO.jpg",
+            "language": "en",
+            "published_at": "2022-02-02T19:14:33.000000Z",
+            "source": "jewishjournal.com",
+            "categories": [
+              "general"
+            ],
+            "relevance_score": 25.764534
         },
         {
-            "source": {
-                "id": null,
-                "name": "Hospitality Net"
-            },
-            "author": "The Travel Foundation",
-            "title": "The Travel Foundation strengthens its leadership with three new trustees",
-            "description": "Leading global sustainable tourism NGO, the Travel Foundation has welcomed three new trustees, bringing a wealth of new experience and expertise to its team.",
-            "url": "https://www.hospitalitynet.org/news/4127692.html",
-            "urlToImage": "https://www.hospitalitynet.org/HN-icon.jpg",
-            "publishedAt": "2025-06-13T14:15:49Z",
-            "content": "Leading global sustainable tourism NGO, the Travel Foundation has welcomed three new trustees, bringing a wealth of new experience and expertise to its team.\r\nThe Travel Foundations new trustees are:… [+2973 chars]"
+            "uuid": "4943cc9e-a9a2-4663-859d-3af598e6f5f4",
+            "title": "NGO seeks case against Musk’s Starlink",
+            "description": "NGO Telecom Watchdog has written to the Department of Telecom (DoT) seeking a criminal case be filed against the Elon Musk-owned Starlink, for allegedly chargin...",
+            "keywords": "",
+            "snippet": "NGO Telecom Watchdog has written to the Department of Telecom (DoT) seeking a criminal case be filed against the Elon Musk-owned Starlink, for allegedly chargin...",
+            "url": "https://www.thehindu.com/business/ngo-seeks-case-against-musks-starlink/article37759930.ece",
+            "image_url": "https://www.thehindu.com/static/theme/default/base/img/og-image.jpg",
+            "language": "en",
+            "published_at": "2021-11-29T17:14:48.000000Z",
+            "source": "thehindu.com",
+            "categories": [
+              "business"
+            ],
+            "relevance_score": 25.743856
         }
     ]
 }
