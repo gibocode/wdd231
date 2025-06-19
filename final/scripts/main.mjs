@@ -29,17 +29,21 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const donationsButtons = document.querySelectorAll(".donations button");
 
-    donationsButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            showModal(button);
+    if (donationsButtons) {
+        donationsButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                showModal(button);
+            });
         });
-    });
+    }
 
     const closeModalButton = document.querySelector(".modal button");
 
-    closeModalButton.addEventListener("click", () => {
-        closeModal();
-    });
+    if (closeModalButton) {
+        closeModalButton.addEventListener("click", () => {
+            closeModal();
+        });
+    }
 });
 
 function loadView(view) {
