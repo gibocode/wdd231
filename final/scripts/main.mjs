@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
-    const closeModalButton = document.querySelector(".modal button");
+    const closeModalButton = document.querySelector("#modal button");
 
     if (closeModalButton) {
         closeModalButton.addEventListener("click", () => {
@@ -102,25 +102,15 @@ function subscribe(emails, email) {
 }
 
 function showModal(button) {
-    const modal = document.querySelector(".modal");
-
-    modal.style.flexDirection = "column";
-    modal.style.justifySelf = "center";
-    modal.style.top = "200px";
-    modal.style.minWidth = "320px";
-    modal.style.width = "500px";
+    const modal = document.querySelector("#modal");
 
     const header = button.parentNode.querySelector("div").textContent;
     const icon = button.parentNode.parentNode.querySelector("span").cloneNode(true);
     const description = button.parentNode.querySelector("p").cloneNode(true);
 
-    modal.querySelector(".modal-header").textContent = header;
+    modal.querySelector("#modal-header").textContent = header;
 
-    const modalBody = modal.querySelector(".modal > div:nth-child(2)");
-
-    modalBody.style.padding = "40px";
-    modalBody.style.display = "flex";
-    modalBody.style.gap = "20px";
+    const modalBody = modal.querySelector("#modal-body");
 
     modalBody.innerHTML = "";
     modalBody.appendChild(icon);
@@ -130,6 +120,6 @@ function showModal(button) {
 }
 
 function closeModal() {
-    const modal = document.querySelector(".modal");
+    const modal = document.querySelector("#modal");
     modal.close();
 }

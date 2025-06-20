@@ -663,7 +663,15 @@ footer > div > div > div:nth-child(2) a {
     color: var(--white);
 }
 
-.modal-header {
+#modal {
+    flex-direction: column;
+    justify-self: center;
+    top: 200px;
+    min-width: 320px;
+    width: 500px;
+}
+
+#modal-header {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     text-align: center;
@@ -673,12 +681,18 @@ footer > div > div > div:nth-child(2) a {
     font-size: larger;
 }
 
-.modal-footer {
+#modal-body {
+    padding: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+#modal-footer {
     background-color: var(--gray);
     padding: 20px;
     text-align: center;
 }
 
-.modal::backdrop {
+#modal::backdrop {
     background-color: rgba(0,0,0,0.5);
 }
