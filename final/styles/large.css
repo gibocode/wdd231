@@ -42,24 +42,6 @@
     header > div > div:last-child {
         margin-bottom: 0;
     }
-    .hero h2 {
-        color: var(--primary-color);
-        text-align: left;
-        width: fit-content;
-        font-size: clamp(1.5rem, 3vw, 2rem);
-        background-color: var(--white);
-        padding: 10px 20px;
-        margin-bottom: 10px;
-    }
-    .hero > div > div > div {
-        width: fit-content;
-    }
-    .hero > div > div {
-        top: -250px;
-        position: absolute;
-        background-color: transparent;
-        left: 20px;
-    }
     .donations > div {
         padding: 60px 40px;
     }
@@ -85,9 +67,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .hero > div > div {
-        top: -300px;
-    }
     .donations {
         grid-template-columns: repeat(3, 1fr);
     }
