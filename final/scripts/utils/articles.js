@@ -37,6 +37,7 @@ class Article {
 
         image.src = `./images/cache/${this.index}.webp`;
         image.alt = `${data.title} Image`;
+        image.decoding = "async";
 
         if (this.lazyLoad) {
             image.loading = "lazy";
@@ -50,7 +51,6 @@ class Article {
 
         title.textContent = data.title;
         publishedAt.textContent = `Published at ${(new Date(data.published_at)).toLocaleString() || "No publish date"}`;
-        source.textContent = `Source: ${data.source.name || "Unknown source"}`;
         source.textContent = `Source: ${data.source || "Unknown source"}`;
         content.textContent = ((this.featured) ? data.snippet : data.description) || "No description available.";
         button.textContent = "Read Article";
