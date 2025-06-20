@@ -94,9 +94,9 @@ export async function getArticles(itemCount, featured = false) {
         if (window.innerWidth < 768) {
             lazyload = (itemIndex > 0);
         } else if (window.innerWidth < 980) {
-            lazyload = (itemIndex > 3);
+            lazyload = (itemIndex > 1);
         } else {
-            lazyload = (itemIndex > 5);
+            lazyload = (itemIndex > 2);
         }
         renderArticle(container, article, lazyload, itemIndex, featured);
     });
