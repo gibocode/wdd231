@@ -619,6 +619,14 @@ footer > div > div > div:nth-child(2) a {
     color: var(--white);
 }
 
+footer a[target="_blank"] {
+    color: var(--secondary-color);
+}
+
+footer a[target="_blank"]:hover {
+    filter: brightness(0.8);
+}
+
 #modal {
     flex-direction: column;
     justify-self: center;
