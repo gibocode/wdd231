@@ -78,7 +78,7 @@ section:nth-of-type(2) h2 {
     margin: 0 auto 30px;
 }
 
-.volunteers {
+#volunteers {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
@@ -86,7 +86,7 @@ section:nth-of-type(2) h2 {
     margin: 0 auto;
 }
 
-.volunteers > div {
+#volunteers > div {
     display: flex;
     flex-direction: column;
     background-color: var(--primary-color);
@@ -94,29 +94,29 @@ section:nth-of-type(2) h2 {
     border-bottom: 5px solid var(--secondary-color);
 }
 
-.volunteers > div > div {
+#volunteers > div > div {
     padding: 10px;
 }
 
-.volunteers picture {
+#volunteers picture {
     aspect-ratio: 13 / 17;
     overflow: hidden;
     position: relative;
 }
 
-.volunteers img {
+#volunteers img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: all 0.2s ease-in-out;
 }
 
-.volunteers img:hover {
+#volunteers img:hover {
     filter: blur(2px) brightness(0.7);
 }
 
 @media screen and (min-width: 413px) {
-    .volunteers {
+    #volunteers {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
@@ -134,7 +134,7 @@ section:nth-of-type(2) h2 {
         gap: 30px;
         padding: 60px;
     }
-    .volunteers {
+    #volunteers {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
@@ -144,7 +144,7 @@ section:nth-of-type(2) h2 {
     section:first-of-type > div {
         padding: 40px;
     }
-    .volunteers {
+    #volunteers {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
     }
