@@ -78,7 +78,7 @@ section:nth-of-type(2) h2 {
     margin: 0 auto 30px;
 }
 
-#volunteers {
+section:nth-of-type(2) > div {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
@@ -86,7 +86,7 @@ section:nth-of-type(2) h2 {
     margin: 0 auto;
 }
 
-#volunteers > div {
+section:nth-of-type(2) > div > div {
     display: flex;
     flex-direction: column;
     background-color: var(--primary-color);
@@ -94,29 +94,29 @@ section:nth-of-type(2) h2 {
     border-bottom: 5px solid var(--secondary-color);
 }
 
-#volunteers > div > div {
+section:nth-of-type(2) > div > div > div {
     padding: 10px;
 }
 
-#volunteers picture {
+section:nth-of-type(2) > div picture {
     aspect-ratio: 13 / 17;
     overflow: hidden;
     position: relative;
 }
 
-#volunteers img {
+section:nth-of-type(2) > div img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: all 0.2s ease-in-out;
 }
 
-#volunteers img:hover {
+section:nth-of-type(2) > div img:hover {
     filter: blur(2px) brightness(0.7);
 }
 
 @media screen and (min-width: 413px) {
-    #volunteers {
+    section:nth-of-type(2) > div {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
@@ -134,7 +134,7 @@ section:nth-of-type(2) h2 {
         gap: 30px;
         padding: 60px;
     }
-    #volunteers {
+    section:nth-of-type(2) > div {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
@@ -144,7 +144,7 @@ section:nth-of-type(2) h2 {
     section:first-of-type > div {
         padding: 40px;
     }
-    #volunteers {
+    section:nth-of-type(2) > div {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
     }
