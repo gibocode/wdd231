@@ -76,7 +76,7 @@ class Article {
 
 export async function getArticles(itemCount, featured = false) {
 
-    const selector = (featured) ? "#featured-news" : ".articles";
+    const selector = (featured) ? "#featured-news" : "#articles";
     const container = document.querySelector(selector);
     const news = new News();
     const articles = await news.getArticles();

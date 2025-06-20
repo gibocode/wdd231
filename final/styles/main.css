@@ -669,6 +669,8 @@ footer > div > div > div:nth-child(2) a {
     top: 200px;
     min-width: 320px;
     width: 500px;
+    border: none;
+    box-shadow: 0 0 10px #000;
 }
 
 #modal-header {
