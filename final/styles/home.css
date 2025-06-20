@@ -1,4 +1,4 @@
-#hero h2 {
+.hero h2 {
     color: var(--white);
     text-align: center;
     font-weight: bold;
@@ -6,7 +6,7 @@
     background-color: var(--primary-color);
 }
 
-#hero > div > div > div {
+.hero > div > div > div {
     background-color: var(--primary-color);
     text-align: center;
     color: var(--gray);
@@ -14,17 +14,17 @@
     font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
-#hero {
+.hero {
     overflow: hidden;
 }
 
-#hero picture {
+.hero picture {
     aspect-ratio: 206 / 135;
     overflow: hidden;
     position: relative;
 }
 
-#hero img {
+.hero img {
     display: flex;
     justify-self: center;
     width: 100%;
@@ -32,18 +32,18 @@
     object-fit: cover;
 }
 
-#hero > div {
+.hero > div {
     position: relative;
 }
 
-#hero > div > div {
+.hero > div > div {
     position: relative;
     padding: 40px 20px;
     background-color: var(--primary-color);
 }
 
 @media screen and (min-width: 768px) {
-    #hero h2 {
+    .hero h2 {
         color: var(--primary-color);
         text-align: left;
         width: fit-content;
@@ -52,10 +52,10 @@
         padding: 10px 20px;
         margin-bottom: 10px;
     }
-    #hero > div > div > div {
+    .hero > div > div > div {
         width: fit-content;
     }
-    #hero > div > div {
+    .hero > div > div {
         top: -250px;
         position: absolute;
         background-color: transparent;
@@ -64,7 +64,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-    #hero > div > div {
+    .hero > div > div {
         top: -300px;
     }
 }
